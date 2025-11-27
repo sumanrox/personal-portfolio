@@ -1,0 +1,195 @@
+{
+  "personal": {
+    "name": "Suman Roy",
+    "title": "Security Researcher",
+    "tagline": "Penetration Testing & Vulnerability Research",
+    "bio": "Security researcher specializing in web application security, API security, and infrastructure penetration testing. Passionate about finding and responsibly disclosing vulnerabilities to make the internet safer.",
+    "location": "Remote Worldwide",
+    "availability": "Open to private programs, pentesting contracts, and security research collaborations",
+    "responseTime": "Within 24 hours"
+  },
+  
+  "contact": {
+    "email": "security@sumanroy.dev",
+    "social": {
+      "github": "https://github.com/sumanroy",
+      "hackerone": "https://hackerone.com/sumanroy",
+      "bugcrowd": "https://bugcrowd.com/sumanroy",
+      "intigriti": "https://intigriti.com/sumanroy",
+      "linkedin": "https://linkedin.com/in/sumanroy-security",
+      "twitter": "https://twitter.com/sumanroy_sec"
+    }
+  },
+  
+  "stats": {
+    "experience": {
+      "value": 6,
+      "label": "Years",
+      "description": "Professional security research experience"
+    },
+    "cves": {
+      "value": 12,
+      "label": "CVEs",
+      "description": "Published Common Vulnerabilities and Exposures"
+    },
+    "bounties": {
+      "value": 50,
+      "label": "Bounties",
+      "prefix": "$",
+      "suffix": "K+",
+      "description": "Total bug bounty earnings"
+    },
+    "rank": {
+      "value": 1,
+      "label": "Top 1%",
+      "description": "HackerOne global ranking"
+    }
+  },
+  
+  "skills": {
+    "categories": [
+      {
+        "name": "Web Security",
+        "items": ["XSS", "SQLi", "CSRF", "SSRF", "XXE", "Deserialization", "Authentication Bypass"]
+      },
+      {
+        "name": "API Security",
+        "items": ["REST API", "GraphQL", "OAuth", "JWT", "API Fuzzing", "Rate Limiting Bypass"]
+      },
+      {
+        "name": "Infrastructure",
+        "items": ["Network Pentesting", "Cloud Security", "Container Security", "AWS/Azure", "Kubernetes"]
+      },
+      {
+        "name": "Tools & Frameworks",
+        "items": ["Burp Suite", "OWASP ZAP", "Nuclei", "Metasploit", "Nmap", "Wireshark", "Custom Scripts"]
+      }
+    ]
+  },
+  
+  "experience": [
+    {
+      "title": "Senior Security Researcher",
+      "company": "Independent",
+      "period": "2019 - Present",
+      "type": "full-time",
+      "description": "Full-time bug bounty hunter and security researcher. Focus on web application security, API security, and cloud infrastructure penetration testing.",
+      "highlights": [
+        "Discovered 12+ CVEs in major software platforms",
+        "Achieved Top 1% ranking on HackerOne",
+        "Earned $50K+ in bug bounties",
+        "Contributed to open-source security tools"
+      ]
+    },
+    {
+      "title": "Security Consultant",
+      "company": "Various Clients",
+      "period": "2018 - 2019",
+      "type": "contract",
+      "description": "Provided penetration testing and security assessment services for startups and enterprises.",
+      "highlights": [
+        "Conducted 20+ comprehensive security audits",
+        "Identified critical vulnerabilities in production systems",
+        "Delivered detailed remediation guidance"
+      ]
+    }
+  ],
+  
+  "certifications": [
+    {
+      "name": "OSCP",
+      "fullName": "Offensive Security Certified Professional",
+      "issuer": "Offensive Security",
+      "year": 2020
+    },
+    {
+      "name": "CEH",
+      "fullName": "Certified Ethical Hacker",
+      "issuer": "EC-Council",
+      "year": 2019
+    }
+  ],
+  
+  "research": [
+    {
+      "id": "001",
+      "title": "Authentication Bypass in Enterprise CMS",
+      "severity": "Critical",
+      "type": "Authentication",
+      "cve": "CVE-2023-XXXXX",
+      "bounty": 5000,
+      "description": "Discovered a critical authentication bypass vulnerability affecting 10,000+ installations.",
+      "impact": "Complete system compromise",
+      "status": "Patched"
+    },
+    {
+      "id": "002",
+      "title": "SQL Injection in E-commerce Platform",
+      "severity": "High",
+      "type": "Injection",
+      "cve": "CVE-2023-YYYYY",
+      "bounty": 3000,
+      "description": "Found SQL injection leading to customer data exposure.",
+      "impact": "Database access, PII exposure",
+      "status": "Patched"
+    }
+  ],
+  
+  "projects": [
+    {
+      "name": "Red Team Toolkit",
+      "description": "Collection of custom penetration testing scripts and automation tools for security assessments.",
+      "tags": ["Python", "Bash", "Security", "Automation"],
+      "github": "https://github.com/sumanroy/red-team-toolkit",
+      "featured": true
+    },
+    {
+      "name": "Blue Team Dashboard",
+      "description": "Real-time security monitoring dashboard for SOC teams with threat intelligence integration.",
+      "tags": ["JavaScript", "React", "Security", "Monitoring"],
+      "github": "https://github.com/sumanroy/blue-team-dashboard",
+      "featured": true
+    },
+    {
+      "name": "Nuclei Templates",
+      "description": "Custom detection templates for Nuclei vulnerability scanner. 50+ templates contributed to ProjectDiscovery.",
+      "tags": ["YAML", "Security", "Open Source"],
+      "github": "https://github.com/projectdiscovery/nuclei/pulls?q=author:sumanroy",
+      "featured": true
+    },
+    {
+      "name": "CloudSploit-Custom",
+      "description": "Extended CloudSploit with custom plugins for detecting misconfigurations in hybrid cloud environments.",
+      "tags": ["JavaScript", "AWS", "Azure", "Compliance"],
+      "github": "https://github.com/sumanroy/cloudsploit-custom",
+      "featured": true
+    },
+    {
+      "name": "API Fuzzer Pro",
+      "description": "High-performance API fuzzing tool designed to uncover edge-case vulnerabilities in REST and GraphQL endpoints.",
+      "tags": ["Go", "Fuzzing", "API Security"],
+      "github": "https://github.com/sumanroy/api-fuzzer-pro",
+      "featured": true
+    },
+    {
+      "name": "ZeroTrust Auth",
+      "description": "A proof-of-concept implementation of Zero Trust authentication principles using mTLS and OPA policies.",
+      "tags": ["Rust", "OPA", "Zero Trust"],
+      "github": "https://github.com/sumanroy/zerotrust-auth",
+      "featured": true
+    }
+  ],
+  
+  "seo": {
+    "title": "Suman Roy — Security Researcher | Penetration Testing & Bug Bounty Hunter",
+    "description": "Security researcher specializing in penetration testing, vulnerability research, and bug bounty hunting. 12+ CVEs discovered, Top 1% on HackerOne.",
+    "keywords": "security researcher, penetration testing, bug bounty, vulnerability research, ethical hacking, CVE, HackerOne",
+    "author": "Suman Roy",
+    "themeColor": "#000000",
+    "ogType": "website",
+    "ogTitle": "Suman Roy — Security Researcher",
+    "ogDescription": "Security researcher specializing in penetration testing, vulnerability research, and bug bounty hunting.",
+    "twitterCard": "summary_large_image",
+    "twitterCreator": "@sumanroy_sec"
+  }
+}

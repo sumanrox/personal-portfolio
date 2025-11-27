@@ -1,0 +1,65 @@
+/* Timeline Styles - Studio Grade */
+
+.timeline-line {
+  background: var(--bg-dark-secondary);
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.timeline-line-fill {
+  transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-dot-wrapper {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-dot {
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 4px var(--bg-dark-tertiary), 0 0 0 6px var(--color-primary), var(--shadow-primary-glow-timeline);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-pulse {
+  border-radius: 50%;
+  animation: timelinePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes timelinePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.timeline-item:hover .timeline-dot-wrapper {
+  transform: scale(1.2);
+}
+
+.timeline-item:hover .timeline-dot {
+  box-shadow: 0 0 0 6px var(--bg-dark-tertiary), 0 0 0 8px var(--color-primary), 0 0 30px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 255, 255, 0.4);
+  transform: scale(1.2);
+}
+
+.timeline-connector {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-connector {
+  opacity: 1;
+  width: 3rem;
+  background: linear-gradient(to right, var(--color-primary) 0%, transparent 100%);
+  box-shadow: var(--shadow-primary-glow);
+}
+
+.timeline-content {
+  transform-origin: left center;
+}
+
+/* Timeline items start visible, GSAP will animate them */

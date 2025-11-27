@@ -1,0 +1,82 @@
+/* Work/Research Section Styles - Minimal Brutalist */
+
+#work {
+    position: relative;
+    /* Background grid is handled by utility classes in HTML */
+}
+
+/* Card Hover Effects */
+.group:hover {
+    transform: translateY(-2px);
+}
+
+/* Add rounded corners to cards */
+.group {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Badges with rounded corners */
+.group span[class*="bg-red-"],
+.group span[class*="bg-orange-"],
+.group span[class*="bg-purple-"],
+.group span[class*="bg-white"] {
+    border-radius: 4px;
+}
+
+/* Typography Refinements */
+.font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Custom Scrollbar for this section if needed */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Entry Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.no-auto-anim>div {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    /* Start hidden */
+}
+
+.no-auto-anim>div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.no-auto-anim>div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.no-auto-anim>div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.no-auto-anim>div:nth-child(4) {
+    animation-delay: 0.4s;
+}

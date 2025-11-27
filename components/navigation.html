@@ -1,0 +1,148 @@
+<!-- Navigation Component -->
+<nav id="main-nav" class="nav-sticky top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl">
+  <div
+    class="nav-container bg-black rounded-full px-4 py-3 flex items-center justify-between gap-3 border border-white/10 shadow-2xl">
+
+    <!-- Logo/Brand -->
+    <a href="#hero-section"
+      class="nav-logo flex items-center gap-2 text-white font-bold text-sm tracking-tight hover:opacity-80 transition-opacity">
+      <div class="w-7 h-7 bg-white rounded-full flex items-center justify-center">
+        <span class="text-black font-bold text-xs">S</span>
+      </div>
+      <span class="hidden sm:inline">SUMAN ROY</span>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <div class="nav-links hidden lg:flex items-center gap-0.5">
+      <a href="#about"
+        class="nav-link px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">About</a>
+      <a href="#services"
+        class="nav-link px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">Services</a>
+      <a href="#experience"
+        class="nav-link px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">Experience</a>
+      <a href="#work"
+        class="nav-link px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">Work</a>
+      <a href="#projects"
+        class="nav-link px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">Projects</a>
+      <a href="#testimonials"
+        class="nav-link px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">Testimonials</a>
+      <a href="#faq"
+        class="nav-link px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">FAQ</a>
+
+      <!-- Blog Dropdown -->
+      <div class="nav-dropdown relative">
+        <button
+          class="nav-link nav-dropdown-trigger px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold flex items-center gap-1">
+          Blog
+          <i data-lucide="chevron-down" class="w-3 h-3 transition-transform duration-200"></i>
+        </button>
+        <div
+          class="nav-dropdown-menu absolute top-full left-0 mt-4 bg-black rounded-xl border border-white/10 shadow-2xl opacity-0 scale-95 pointer-events-none transition-all duration-200 min-w-[140px]">
+          <div class="py-1.5 px-1.5">
+            <a href="/blog/security"
+              class="dropdown-item block px-3 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 text-xs font-bold">Security</a>
+            <a href="/blog/tutorials"
+              class="dropdown-item block px-3 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 text-xs font-bold">Tutorials</a>
+            <a href="/blog/research"
+              class="dropdown-item block px-3 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 text-xs font-bold">Research</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools Dropdown -->
+      <div class="nav-dropdown relative">
+        <button
+          class="nav-link nav-dropdown-trigger px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold flex items-center gap-1">
+          Tools
+          <i data-lucide="chevron-down" class="w-3 h-3 transition-transform duration-200"></i>
+        </button>
+        <div
+          class="nav-dropdown-menu absolute top-full left-0 mt-4 bg-black rounded-xl border border-white/10 shadow-2xl opacity-0 scale-95 pointer-events-none transition-all duration-200 min-w-[140px]">
+          <div class="py-1.5 px-1.5">
+            <a href="https://github.com/sumanrox" target="_blank" rel="noopener noreferrer"
+              class="dropdown-item block px-3 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 text-xs font-bold">GitHub</a>
+            <a href="https://hackerone.com/sumanrox" target="_blank" rel="noopener noreferrer"
+              class="dropdown-item block px-3 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 text-xs font-bold">HackerOne</a>
+            <a href="https://linkedin.com/in/sumanrox" target="_blank" rel="noopener noreferrer"
+              class="dropdown-item block px-3 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 text-xs font-bold">LinkedIn</a>
+            <a href="https://twitter.com/sumanroy_sec" target="_blank" rel="noopener noreferrer"
+              class="dropdown-item block px-3 py-2 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 text-xs font-bold">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Button - Hidden on mobile -->
+    <a href="#contact"
+      class="nav-cta font-bold bg-white text-black px-4 py-1.5 rounded-full font-semibold text-xs hover:bg-gray-100 transition-all duration-200 shadow-md hidden md:inline-flex">
+      Book A Call
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="mobile-menu-toggle"
+      class="lg:hidden w-8 h-8 flex items-center justify-center text-white hover:bg-white/10 rounded-full transition-colors"
+      aria-label="Toggle menu" aria-expanded="false">
+      <i data-lucide="menu" class="w-4 h-4"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+    class="lg:hidden absolute top-full left-0 right-0 mt-4 bg-black rounded-3xl overflow-hidden border border-white/10 shadow-2xl opacity-0 scale-95 pointer-events-none transition-all duration-300">
+    <div class="p-6 space-y-2">
+      <a href="#about"
+        class="mobile-nav-link block px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-sm font-bold">About</a>
+      <a href="#services"
+        class="mobile-nav-link block px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-sm font-bold">Services</a>
+      <a href="#experience"
+        class="mobile-nav-link block px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-sm font-bold">Experience</a>
+      <a href="#work"
+        class="mobile-nav-link block px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-sm font-bold">Work</a>
+      <a href="#projects"
+        class="mobile-nav-link block px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-sm font-bold">Projects</a>
+      <a href="#testimonials"
+        class="mobile-nav-link block px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-sm font-bold">Testimonials</a>
+      <a href="#faq"
+        class="mobile-nav-link block px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-sm font-bold">FAQ</a>
+
+      <!-- Blog Submenu -->
+      <div class="mobile-blog-submenu">
+        <button
+          class="mobile-blog-trigger w-full flex items-center justify-between px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-sm font-bold">
+          <span>Blog</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-200"></i>
+        </button>
+        <div class="mobile-blog-content pl-4 space-y-1 mt-1" style="display: none;">
+          <a href="/blog/security"
+            class="mobile-nav-link block px-6 py-2 text-white/60 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">Security</a>
+          <a href="/blog/tutorials"
+            class="mobile-nav-link block px-6 py-2 text-white/60 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">Tutorials</a>
+          <a href="/blog/research"
+            class="mobile-nav-link block px-6 py-2 text-white/60 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">Research</a>
+        </div>
+      </div>
+
+      <!-- Tools Submenu -->
+      <div class="mobile-tools-submenu">
+        <button
+          class="mobile-tools-trigger w-full flex items-center justify-between px-6 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-sm font-bold">
+          <span>Tools</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-200"></i>
+        </button>
+        <div class="mobile-tools-content pl-4 space-y-1 mt-1" style="display: none;">
+          <a href="https://github.com/sumanrox" target="_blank" rel="noopener noreferrer"
+            class="mobile-nav-link block px-6 py-2 text-white/60 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">GitHub</a>
+          <a href="https://hackerone.com/sumanrox" target="_blank" rel="noopener noreferrer"
+            class="mobile-nav-link block px-6 py-2 text-white/60 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">HackerOne</a>
+          <a href="https://linkedin.com/in/sumanrox" target="_blank" rel="noopener noreferrer"
+            class="mobile-nav-link block px-6 py-2 text-white/60 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">LinkedIn</a>
+          <a href="https://twitter.com/sumanroy_sec" target="_blank" rel="noopener noreferrer"
+            class="mobile-nav-link block px-6 py-2 text-white/60 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 text-xs font-bold">Twitter</a>
+        </div>
+      </div>
+
+      <a href="#contact"
+        class="mobile-nav-link block px-6 py-3 bg-white text-black rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-200 text-center mt-4">Contact</a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,98 @@
+/**
+ * 3D Orb Loader Animation
+ * Particle system forming a rotating 3D sphere
+ */
+
+/* Loading screen container */
+#page-loader {
+  overflow: hidden;
+}
+
+/* Orb wrapper - center of rotation */
+.loader-orb-wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: orb-rotate 20s infinite linear;
+}
+
+@keyframes orb-rotate {
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+/* Particle style - dynamically generated */
+.loader-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  opacity: 0;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+/* Loader text */
+.loader-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  color: var(--text-white);
+  text-transform: uppercase;
+  font-family: 'Courier New', monospace;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+/* Decryption animation */
+@keyframes decrypt {
+  0%, 20% {
+    content: 'D3CRY9T1NG';
+    opacity: 0.5;
+  }
+  40% {
+    content: 'D3CRYPTING';
+    opacity: 0.7;
+  }
+  60% {
+    content: 'DECRYPTING';
+    opacity: 0.9;
+  }
+  80% {
+    content: 'DECRYPTING';
+    opacity: 1;
+  }
+  100% {
+    content: 'DECRYPTING';
+    opacity: 1;
+  }
+}
+
+/* Fallback simple spinner for older browsers */
+@supports not (transform-style: preserve-3d) {
+  .loader-orb-wrap {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .loader-particle {
+    display: none;
+  }
+}

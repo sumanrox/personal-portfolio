@@ -1,0 +1,618 @@
+/* Custom styles for character-by-character animation */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  position: relative;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* Noise Texture Overlay - Film Grain Effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  animation: grain 8s steps(10) infinite;
+}
+
+@keyframes grain {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-5%, -10%);
+  }
+
+  20% {
+    transform: translate(-15%, 5%);
+  }
+
+  30% {
+    transform: translate(7%, -25%);
+  }
+
+  40% {
+    transform: translate(-5%, 25%);
+  }
+
+  50% {
+    transform: translate(-15%, 10%);
+  }
+
+  60% {
+    transform: translate(15%, 0%);
+  }
+
+  70% {
+    transform: translate(0%, 15%);
+  }
+
+  80% {
+    transform: translate(3%, 25%);
+  }
+
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+/* Hero text container - ensure visibility */
+#hero-text-1,
+#hero-text-2,
+#about-text,
+#work-text,
+#contact-text {
+  opacity: 1;
+}
+
+/* Character span styling for the animated text - SplitType creates .char class */
+.char {
+  display: inline-block;
+  color: #d4d4d4;
+  /* default gray */
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: color;
+}
+
+.char.active {
+  color: #000000;
+  /* black when activated */
+}
+
+/* Preserve word spacing - CRITICAL: Keep words together */
+.word {
+  display: inline-block;
+  white-space: nowrap !important;
+}
+
+/* Prevent word breaks in titles and headings */
+#hero-text-1,
+#hero-text-2,
+#about-text,
+#work-text,
+#contact-text {
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: manual;
+}
+
+/* Keep individual words together after SplitType - with proper spacing */
+#hero-text-1 .word,
+#hero-text-2 .word,
+#about-text .word,
+#work-text .word,
+#contact-text .word {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  margin-right: 0;
+}
+
+/* Remove margin from last word */
+#hero-text-1 .word:last-child,
+#hero-text-2 .word:last-child,
+#about-text .word:last-child,
+#work-text .word:last-child,
+#contact-text .word:last-child {
+  margin-right: 0;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+
+  /* Ensure proper spacing on mobile */
+  section {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  /* Hero section improvements for mobile - BIGGER TEXT */
+  #hero-text-1,
+  #hero-text-2 {
+    font-size: clamp(3rem, 12vw, 5rem) !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.05em !important;
+  }
+
+  /* Fix animated section headings on mobile */
+  #about-text,
+  #work-text {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  #contact-text {
+    font-size: clamp(2.25rem, 9vw, 3.5rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  /* Ensure proper grid spacing */
+  .grid {
+    gap: 1.5rem !important;
+  }
+
+  /* Fix project card spacing */
+  .space-y-32>*+* {
+    margin-top: 4rem !important;
+  }
+
+  /* Ensure images don't overflow */
+  img,
+  .aspect-\[4\/3\] {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  #hero-text-1,
+  #hero-text-2 {
+    font-size: clamp(4rem, 8vw, 6rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  #about-text,
+  #work-text {
+    font-size: clamp(2.5rem, 5vw, 3.5rem) !important;
+  }
+
+  #contact-text {
+    font-size: clamp(3rem, 5.5vw, 4rem) !important;
+  }
+}
+
+/* Ensure smooth animations on all devices */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Consistency fixes */
+section {
+  border-color: #e5e7eb;
+}
+
+/* Ensure consistent spacing */
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+/* Typography consistency */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+/* Prevent awkward word breaks in animated headings */
+#hero-text-1,
+#hero-text-2,
+#about-text,
+#work-text,
+#contact-text {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+/* Link hover consistency */
+a {
+  transition: all 0.2s ease;
+}
+
+/* Fixed navigation bar */
+nav {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Hamburger Menu Animation */
+.hamburger-line {
+  transform-origin: center;
+}
+
+#mobile-menu-btn.active .hamburger-line:first-child {
+  transform: translateY(9px) rotate(45deg);
+}
+
+#mobile-menu-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+#mobile-menu-btn.active .hamburger-line:last-child {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Menu Animations */
+#mobile-menu {
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 0;
+}
+
+#mobile-menu.active {
+  max-height: 400px;
+}
+
+.mobile-menu-content {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s;
+}
+
+#mobile-menu.active .mobile-menu-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-link {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-menu.active .mobile-menu-link:nth-child(1) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.1s;
+}
+
+#mobile-menu.active .mobile-menu-link:nth-child(2) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.15s;
+}
+
+#mobile-menu.active .mobile-menu-link:nth-child(3) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+
+#mobile-menu.active .mobile-menu-link:nth-child(4) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.25s;
+}
+
+/* Smooth scroll offset for fixed nav */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* F-pattern visual guides */
+.grid.md\:grid-cols-12>div:first-child {
+  /* Left column for labels */
+  color: #000;
+}
+
+/* Footer specific overrides - force white text on black background */
+footer {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+footer * {
+  color: #ffffff !important;
+}
+
+footer h2,
+footer h3,
+footer p,
+footer a,
+footer nav {
+  color: inherit;
+}
+
+footer a {
+  color: #d1d5db !important;
+  /* gray-300 */
+}
+
+footer a:hover {
+  color: #ffffff !important;
+}
+
+footer .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+footer .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+footer .text-gray-300 {
+  color: #d1d5db !important;
+}
+
+footer .text-white {
+  color: #ffffff !important;
+}
+
+footer .bg-green-500 {
+  background-color: #10b981 !important;
+}
+
+/* ===================================
+   MICRO-INTERACTIONS
+   =================================== */
+
+/* Loading Screen - Decryption Effect */
+#loading-screen {
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #000000;
+  transform: scale(1);
+}
+
+#loading-screen.loaded {
+  opacity: 0;
+  transform: scale(1.1);
+  pointer-events: none;
+}
+
+#particle-canvas {
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.loading-content {
+  transition: transform 0.3s ease;
+  animation: contentFloat 3s ease-in-out infinite;
+}
+
+@keyframes contentFloat {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.decrypt-text {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.15em;
+  position: relative;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.2);
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
+      0 0 40px rgba(255, 255, 255, 0.2);
+  }
+
+  100% {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
+      0 0 60px rgba(255, 255, 255, 0.3),
+      0 0 80px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.decrypt-status {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.decrypt-dots {
+  display: inline-block;
+  animation: dotPulse 1.5s infinite;
+}
+
+@keyframes dotPulse {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Timeline Styles - Studio Grade */
+.timeline-line {
+  background: #e5e7eb;
+  position: relative;
+}
+
+.timeline-line-fill {
+  transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-dot-wrapper {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-dot {
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 4px #ffffff, 0 0 0 5px currentColor;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-pulse {
+  border-radius: 50%;
+  animation: timelinePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes timelinePulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.timeline-item:hover .timeline-dot-wrapper {
+  transform: scale(1.2);
+}
+
+.timeline-item:hover .timeline-dot {
+  box-shadow: 0 0 0 6px #ffffff, 0 0 0 8px currentColor, 0 0 20px currentColor;
+}
+
+.timeline-connector {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-connector {
+  opacity: 1;
+  width: 3rem;
+  background: linear-gradient(to right, #000000 0%, transparent 100%);
+}
+
+.timeline-content {
+  transform-origin: left center;
+}
+
+/* Timeline items start visible, GSAP will animate them */
+
+/* 1. Scroll Indicator Animation */
+.scroll-indicator {
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0.6;
+  }
+}
+
+/* 2. Magnetic Card Effect - Follows cursor */
+.tilt-card {
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  cursor: pointer;
+  position: relative;
+}
+
+.tilt-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.tilt-card:hover::before {
+  opacity: 1;
+}
+
+.tilt-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* 3. Counter Animation - Numbers will be animated via JS */
+.counter {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-item {
+  opacity: 1;
+  transform: translateY(0);
+}

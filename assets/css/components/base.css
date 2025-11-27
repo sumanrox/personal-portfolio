@@ -1,0 +1,274 @@
+/* Base Styles & Reset */
+
+/* Performance optimizations for mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Smooth Scrolling & Hide Scrollbar */
+html {
+  overflow-x: hidden;
+  /* Better font rendering on mobile */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+/* Force native scroll on mobile - no interference */
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth !important;
+    overflow-y: auto !important;
+  }
+  
+  html.has-scroll-smooth {
+    overflow: auto !important;
+  }
+  
+  body {
+    overflow-y: auto !important;
+  }
+  
+  .has-scroll-smooth body {
+    overflow: auto !important;
+  }
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content container */
+main,
+#main-content,
+[data-scroll-container] {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* Hide Locomotive Scroll scrollbar */
+.c-scrollbar {
+  display: none !important;
+}
+
+.c-scrollbar_thumb {
+  display: none !important;
+}
+
+html,
+body,
+[data-scroll-container] {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+[data-scroll-container]::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Noise Texture Overlay - Film Grain Effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  animation: grain 8s steps(10) infinite;
+  mix-blend-mode: multiply;
+}
+
+@keyframes grain {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-5%, -10%);
+  }
+
+  20% {
+    transform: translate(-15%, 5%);
+  }
+
+  30% {
+    transform: translate(7%, -25%);
+  }
+
+  40% {
+    transform: translate(-5%, 25%);
+  }
+
+  50% {
+    transform: translate(-15%, 10%);
+  }
+
+  60% {
+    transform: translate(15%, 0%);
+  }
+
+  70% {
+    transform: translate(0%, 15%);
+  }
+
+  80% {
+    transform: translate(3%, 25%);
+  }
+
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+/* Controlled border-radius - allow components to define their own */
+/* Exception: Footer arrow circle needs to be round */
+footer .rounded-full {
+  border-radius: 9999px !important;
+}
+
+/* Typography consistency */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+/* Link hover consistency */
+a {
+  transition: all 0.2s ease;
+}
+
+/* Consistent spacing */
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+
+  /* Ensure proper spacing on mobile */
+  section {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  /* Hero section improvements for mobile - BIGGER TEXT */
+  #hero-text-1,
+  #hero-text-2 {
+    font-size: clamp(3rem, 12vw, 5rem) !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.05em !important;
+  }
+
+  /* Fix animated section headings on mobile */
+  #about-text,
+  #work-text {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  #contact-text {
+    font-size: clamp(2.25rem, 9vw, 3.5rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  /* Ensure proper grid spacing */
+  .grid {
+    gap: 1.5rem !important;
+  }
+
+  /* Fix project card spacing */
+  .space-y-32>*+* {
+    margin-top: 4rem !important;
+  }
+
+  /* Ensure images don't overflow */
+  img,
+  .aspect-\[4\/3\] {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  #hero-text-1,
+  #hero-text-2 {
+    font-size: clamp(4rem, 8vw, 6rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  #about-text,
+  #work-text {
+    font-size: clamp(2.5rem, 5vw, 3.5rem) !important;
+  }
+
+  #contact-text {
+    font-size: clamp(3rem, 5.5vw, 4rem) !important;
+  }
+}
+
+/* Ensure smooth animations on all devices */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Consistency fixes */
+section {
+  border: none;
+}

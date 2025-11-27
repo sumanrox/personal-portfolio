@@ -1,0 +1,114 @@
+/* Pill Section Headers CSS */
+
+.pill-section-header {
+  position: relative;
+  background: var(--text-primary);
+  color: var(--text-white);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: clamp(14px, 2.5vw, 16px);
+  padding: clamp(10px, 2vw, 12px) clamp(18px, 4vw, 24px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(160px, 40vw, 200px);
+  max-width: 90vw;
+  height: clamp(40px, 8vw, 48px);
+  opacity: 0;
+  clip-path: polygon(0 35%,
+      10.7% 0,
+      100% 0,
+      100% 65%,
+      89.3% 100%,
+      0% 100%);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1rem;
+}
+
+.pill-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: relative;
+}
+
+.pill-element {
+  color: var(--text-white);
+  display: inline-block;
+  opacity: 0;
+  /* Start hidden for animation */
+}
+
+.pill-element.text {
+  color: var(--text-white);
+  letter-spacing: 1px;
+}
+
+.pill-element.triangle {
+  font-size: 18px;
+  transform: rotate(-90deg);
+}
+
+.pill-element.bracket {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .pill-section-header {
+    font-size: 14px;
+    padding: 10px 18px;
+    min-width: 140px;
+    height: 40px;
+  }
+
+  .pill-element.triangle {
+    font-size: 16px;
+  }
+
+  .pill-element.bracket {
+    font-size: 18px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .pill-section-header {
+    font-size: 16px;
+    padding: 12px 24px;
+    min-width: 200px;
+    height: 48px;
+  }
+}
+
+/* Contact section specific styling - white background with black elements */
+#contact-pill-container .pill-section-header {
+  background: var(--text-primary);
+  color: var(--text-white);
+  box-shadow: var(--shadow-md);
+}
+
+#contact-pill-container .pill-element {
+  color: var(--text-white);
+}
+
+#contact-pill-container .pill-element.text {
+  color: var(--text-white);
+}
+
+/* FAQ section specific styling - ensure visibility */
+#faq-pill-container .pill-section-header {
+  background: var(--text-primary);
+  color: var(--text-white);
+  box-shadow: var(--shadow-md);
+}
+
+#faq-pill-container .pill-element {
+  color: var(--text-white);
+}
+
+#faq-pill-container .pill-element.text {
+  color: var(--text-white);
+}

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes" />
+  <title>Suman Roy — Security Researcher | Penetration Testing & Bug Bounty Hunter</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Security researcher specializing in penetration testing, vulnerability research, and bug bounty hunting. 12+ CVEs discovered, Top 1% on HackerOne." />
+  <meta name="keywords"
+    content="security researcher, penetration testing, bug bounty, vulnerability research, ethical hacking, CVE, HackerOne" />
+  <meta name="author" content="Suman Roy" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Suman Roy — Security Researcher" />
+  <meta property="og:description"
+    content="Security researcher specializing in penetration testing, vulnerability research, and bug bounty hunting." />
+  <meta property="og:site_name" content="Suman Roy" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@sumanroy_sec" />
+  <meta name="twitter:title" content="Suman Roy — Security Researcher" />
+  <meta name="twitter:description"
+    content="Security researcher specializing in penetration testing and vulnerability research." />
+
+  <!-- Security Note: For production, configure these as HTTP headers in your server config:
+         - X-Content-Type-Options: nosniff
+         - X-Frame-Options: DENY
+         - X-XSS-Protection: 1; mode=block
+         - Strict-Transport-Security: max-age=31536000; includeSubDomains
+         - Content-Security-Policy: [full CSP]
+    -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Performance: Preload critical CSS -->
+  <link rel="preload" href="assets/css/main-modular.css" as="style" />
+
+  <!-- Google Fonts - Funnel Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            funnel: ['Manrope', 'sans-serif'],
+            manrope: ['Manrope', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Resource Hints for CDNs -->
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+
+  <!-- GSAP and ScrollTrigger for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer" defer></script>
+  <!-- ScrollSmoother removed - causing issues -->
+
+  <!-- SplitType for text splitting -->
+  <script src="https://unpkg.com/split-type" defer></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+  <!-- Notyf - Toast Notifications -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js" defer></script>
+
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="assets/css/main-modular.css?v=24" /> <!-- Global FAQ Toggle Function -->
+  <script>
+    // FAQ Toggle Function - Must be global and available before components load
+    window.toggleFAQ = function (clickedElement) {
+      // Bring clicked card to front
+      clickedElement.style.position = 'relative';
+      clickedElement.style.zIndex = '10';
+
+      // Use specific selectors within this exact card only
+      const answer = clickedElement.querySelector(':scope > .p-8 > .faq-answer');
+
+      // Icon could be <i> or SVG after Lucide renders - use :scope to limit to this card only
+      let icon = clickedElement.querySelector(':scope > .p-8 > div > .faq-icon');
+      if (!icon) {
+        // Try SVG if Lucide has already rendered
+        icon = clickedElement.querySelector(':scope > .p-8 > div > svg.faq-icon');
+      }
+      if (!icon) {
+        // Fallback to any SVG in the header
+        icon = clickedElement.querySelector(':scope > .p-8 > div > svg');
+      }
+
+      // Safety check
+      if (!answer || !icon) {
+        console.warn('FAQ elements not found in clicked card:', {
+          answer: !!answer,
+          icon: !!icon,
+          cardId: clickedElement.getAttribute('data-faq-id')
+        });
+        return;
+      }
+
+      const isCurrentlyOpen = !answer.classList.contains('hidden');
+
+      // Close all other FAQ cards and reset their z-index
+      const allFaqCards = document.querySelectorAll('.faq-card');
+      allFaqCards.forEach(card => {
+        if (card !== clickedElement) {
+          const cardAnswer = card.querySelector(':scope > .p-8 > .faq-answer');
+          let cardIcon = card.querySelector(':scope > .p-8 > div > .faq-icon');
+          if (!cardIcon) {
+            cardIcon = card.querySelector(':scope > .p-8 > div > svg');
+          }
+
+          if (cardAnswer && cardIcon) {
+            cardAnswer.classList.add('hidden');
+            cardIcon.classList.remove('rotate-45');
+            card.classList.remove('border-black');
+            card.classList.remove('shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]');
+            card.style.zIndex = '1';
+          }
+        }
+      });
+
+      // Toggle the clicked card
+      if (isCurrentlyOpen) {
+        answer.classList.add('hidden');
+        icon.classList.remove('rotate-45');
+        clickedElement.classList.remove('border-black');
+        clickedElement.classList.remove('shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]');
+        clickedElement.style.zIndex = '1';
+      } else {
+        answer.classList.remove('hidden');
+        icon.classList.add('rotate-45');
+        clickedElement.classList.add('border-black');
+        clickedElement.classList.add('shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]');
+        clickedElement.style.zIndex = '10';
+      }
+    };
+  </script>
+</head>
+
+<body class="font-manrope text-black antialiased overflow-x-hidden"
+  style="background: var(--bg-gradient-start); background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%27 height=%27100%27%3E%3Cfilter id=%27noise%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.9%27 numOctaves=%274%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23noise)%27 opacity=%270.05%27/%3E%3C/svg%3E');">
+
+  <!-- Pull to Refresh Indicator -->
+  <div id="pull-to-refresh">
+    <div class="ptr-icon"></div>
+  </div>
+
+  <!-- SEO: Hidden H1 for search engines -->
+  <h1 class="sr-only">Suman Roy - Security Researcher | Penetration Testing & Bug Bounty Hunter</h1>
+
+  <!-- Loading Screen with 3D Orb Animation - DISABLED -->
+  <div id="page-loader"
+    class="fixed inset-0 bg-black z-[9999] flex items-center justify-center transition-opacity duration-500"
+    style="display: none;">
+    <div class="loader-orb-wrap"></div>
+    <div id="loader-text" class="loader-text">DECRYPTING</div>
+  </div>
+
+  <!-- Skip to main content for keyboard navigation -->
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:font-bold focus:border-2 focus:border-black">Skip
+    to main content</a>
+
+  <!-- Film grain overlay -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- Navigation Component - Outside Locomotive container for true fixed positioning -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Content wrapper -->
+  <main id="main-content" class="relative z-10" data-scroll-container>
+
+    <!-- Hero Component -->
+    <div id="hero-placeholder"></div>
+
+
+    <!-- Sections Wrapper with Gradient Background -->
+    <div class="sections-wrapper relative"
+      style="background: #F5F5F5; background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27300%27 height=%27300%27%3E%3Cfilter id=%27noise%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.65%27 numOctaves=%274%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23noise)%27 opacity=%270.015%27/%3E%3C/svg%3E');">
+      <!-- Logo Carousel Component -->
+      <div id="logo-carousel-placeholder" class="relative"></div>
+      <!-- About Component -->
+      <div id="about-placeholder"></div>
+
+      <!-- Services Component -->
+      <div id="services-placeholder"></div>
+
+      <!-- Experience Component -->
+      <div id="experience-placeholder"></div>
+
+      <!-- Work Component -->
+      <div id="work-placeholder"></div>
+
+      <!-- Projects Component -->
+      <div id="projects-placeholder"></div>
+
+      <!-- Testimonials Component -->
+      <div id="testimonials-placeholder"></div>
+
+      <!-- FAQ Component -->
+      <div id="faq-placeholder"></div>
+
+      <!-- Contact Component -->
+      <div id="contact-placeholder"></div>
+    </div>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+  </main> <!-- Close main content -->
+
+  <!-- Floating Book a Call Button - Mobile Only -->
+  <a href="#contact" id="floating-cta" class="md:hidden" aria-label="Book a call">
+    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
+      </path>
+    </svg>
+  </a>
+
+  <!-- Back to Top Button - MUST BE OUTSIDE SCROLL CONTAINER -->
+  <div id="back-to-top" aria-label="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </div>
+
+  <!-- Component Loader -->
+  <script src="load-components.js" defer></script>
+
+  <!-- Loader Animation Module - DISABLED -->
+  <!-- <script type="module" src="./assets/js/components/loaderAnimation.js"></script> -->
+
+  <!-- Main App Initialization -->
+  <script type="module">
+    // Wait for components to load before initializing app
+    window.initializeApp = async function () {
+      const { default: initApp } = await import('./assets/js/app.js');
+
+      // Initialize Lucide Icons
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    };
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+/* Programming Languages Carousel - Sleek & Elegant */
+.logo-carousel-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  position: relative;
+  background: transparent;
+}
+
+.logo-track {
+  display: flex;
+  gap: 3rem;
+  width: fit-content;
+}
+
+.logo-item {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.logo-item:hover {
+  opacity: 1;
+}
+
+.logo-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0;
+  background: transparent;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-icon-inverted {
+  filter: brightness(0) invert(1);
+}
+
+.logo-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-white);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* Infinite scroll animation - seamless loop */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-track.scrolling {
+  animation: scroll-left var(--scroll-duration, 30s) linear infinite;
+  will-change: transform;
+}
+
+/* Pause animation on hover if needed */
+.logo-carousel-container:hover .logo-track.scrolling {
+  /* Keep scrolling - no pause */
+  animation-play-state: running;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-track {
+    gap: 2rem;
+  }
+  
+  .logo-content {
+    gap: 0.5rem;
+  }
+  
+  .logo-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .logo-text {
+    font-size: 0.75rem;
+  }
+}

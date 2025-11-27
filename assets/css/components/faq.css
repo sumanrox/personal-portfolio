@@ -1,0 +1,62 @@
+/* FAQ Section - Minimal Brutalist Style */
+
+/* Entry Animation - Only target FAQ grid items, not the header section */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Target only the FAQ items in the grid, not the header divs */
+#faq .no-auto-anim > div {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  /* Start hidden */
+}
+
+#faq .no-auto-anim > div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+#faq .no-auto-anim > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+#faq .no-auto-anim > div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+#faq .no-auto-anim > div:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+#faq .no-auto-anim > div:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+#faq .no-auto-anim > div:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* FAQ Answer Animation */
+.faq-answer {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

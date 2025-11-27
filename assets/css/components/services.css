@@ -1,0 +1,364 @@
+/* ===================================
+   SERVICES SECTION - BRUTALIST DESIGN
+   =================================== */
+
+/* Services Section Container */
+#services {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Services Grid */
+#services .grid {
+  position: relative;
+}
+
+/* Service Card Base Styles */
+#services .group {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+/* Featured Service Card */
+#services .group.bg-black {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+/* Service Card Hover Effects - Enhanced */
+#services .group:hover {
+  transform: translateY(-4px);
+}
+
+/* Card title micro-interaction */
+#services .group h3 {
+  transition: letter-spacing 0.3s ease, color 0.3s ease;
+}
+
+#services .group:hover h3 {
+  letter-spacing: -0.03em;
+}
+
+/* Featured card specific hover */
+#services .group.bg-black:hover h3 {
+  color: #10b981;
+}
+
+/* Featured Badge */
+#services .bg-green-500 {
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Icon Styles - Clean and Minimal */
+.service-icon-featured {
+  display: inline-flex;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-icon-standard {
+  display: inline-flex;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Smooth bounce on hover */
+#services .group:hover .service-icon-featured {
+  transform: translateY(-4px);
+  animation: iconBounce 0.6s ease-in-out;
+}
+
+#services .group:hover .service-icon-standard {
+  transform: translateY(-4px);
+  animation: iconBounce 0.6s ease-in-out;
+}
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Icon color transitions */
+.service-icon-featured i,
+.service-icon-standard i {
+  transition: all 0.3s ease;
+}
+
+#services .group:hover .service-icon-standard i {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+#services .group:hover .service-icon-featured i {
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+/* Service Tags/Badges - Better micro-interactions */
+#services .font-mono.px-2.py-1 {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
+  position: relative;
+}
+
+#services .font-mono.px-2.py-1:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Filled tags get slight color shift on hover */
+#services .font-mono.px-2.py-1.bg-black:hover {
+  background: #1a1a1a;
+}
+
+/* Bullet points animation - Updated for circles */
+#services .flex.items-center.gap-2 {
+  transition: transform 0.2s ease;
+}
+
+#services .group:hover .flex.items-center.gap-2 {
+  transform: translateX(3px);
+}
+
+#services .flex.items-center.gap-2 .rounded-full {
+  transition: all 0.3s ease;
+}
+
+#services .group:hover .flex.items-center.gap-2 .rounded-full {
+  transform: scale(1.8);
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* CTA Section - Brutalist Design */
+#services .mt-20.border-4,
+#services .mt-16.border-4 {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+#services .mt-20.border-4:hover,
+#services .mt-16.border-4:hover {
+  box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+}
+
+/* Brutalist corner accents animation */
+#services .mt-20 .absolute.bg-black,
+#services .mt-16 .absolute.bg-black {
+  transition: all 0.3s ease;
+}
+
+#services .mt-20:hover .absolute.top-0.left-0.bg-black,
+#services .mt-16:hover .absolute.top-0.left-0.bg-black {
+  width: 2rem;
+  height: 2rem;
+}
+
+#services .mt-20:hover .absolute.top-0.right-0.bg-black,
+#services .mt-16:hover .absolute.top-0.right-0.bg-black {
+  width: 2rem;
+  height: 2rem;
+}
+
+#services .mt-20:hover .absolute.bottom-0.left-0.bg-black,
+#services .mt-16:hover .absolute.bottom-0.left-0.bg-black {
+  width: 2rem;
+  height: 2rem;
+}
+
+#services .mt-20:hover .absolute.bottom-0.right-0.bg-black,
+#services .mt-16:hover .absolute.bottom-0.right-0.bg-black {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* CTA status badge */
+#services .mt-20 .inline-block.mb-6,
+#services .mt-16 .inline-block.mb-4 {
+  transition: transform 0.3s ease;
+}
+
+#services .mt-20:hover .inline-block.mb-6,
+#services .mt-16:hover .inline-block.mb-4 {
+  transform: scale(1.05);
+}
+
+/* CTA Buttons - Brutalist style */
+#services a[href="#contact"],
+#services a[href="#work"] {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#services a[href="#contact"]:hover,
+#services a[href="#work"]:hover {
+  transform: translate(-2px, -2px);
+}
+
+/* Icon animations in CTA */
+#services a i[data-lucide] {
+  transition: transform 0.3s ease;
+}
+
+#services a:hover i[data-lucide="arrow-right"] {
+  transform: translateX(4px);
+}
+
+#services a:hover i[data-lucide="arrow-up-right"] {
+  transform: translate(3px, -3px);
+}
+
+/* Check icons */
+#services i[data-lucide="check"] {
+  color: #10b981;
+}
+
+/* Gradient hover backgrounds - Smoother transitions */
+#services .group .absolute.top-0.right-0.rounded-full {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#services .group:hover .absolute.top-0.right-0.rounded-full {
+  transform: scale(1.2) rotate(45deg);
+}
+
+/* Service number badge animation */
+#services .text-xs.font-mono.font-bold.uppercase.tracking-wider {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+#services .group:hover .text-xs.font-mono.font-bold.uppercase.tracking-wider {
+  transform: scale(1.1);
+}
+
+/* Featured badge pulse refinement */
+#services .bg-green-500 {
+  animation: badgePulse 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+#services .group:hover .bg-green-500 {
+  transform: scale(1.05);
+  animation: badgePulseFast 1s ease-in-out infinite;
+}
+
+@keyframes badgePulseFast {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #services .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  #services .md\\:text-7xl {
+    font-size: 3rem;
+  }
+  
+  #services .group {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #services {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  #services .text-3xl {
+    font-size: 1.75rem;
+  }
+  
+  #services .md\\:text-4xl {
+    font-size: 2rem;
+  }
+}
+
+/* Performance optimizations */
+#services * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#services .group {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Accessibility */
+#services a:focus,
+#services button:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  #services *,
+  #services *::before,
+  #services *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 3D Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) translateX(-5px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-25px) translateX(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-15px) translateX(5px) rotate(-2deg);
+  }
+}
+
+.animate-float-delay-0 {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay-1 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+.animate-float-delay-2 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}

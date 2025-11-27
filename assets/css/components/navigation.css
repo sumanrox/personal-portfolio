@@ -1,0 +1,254 @@
+/* Navigation Component Styles */
+
+/* Base sticky positioning - Locomotive will override this */
+.nav-sticky {
+  position: fixed;
+}
+
+/* Main Navigation */
+#main-nav {
+  animation: navSlideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  will-change: transform;
+  transform: translate(-50%, 0);
+  /* Let Locomotive Scroll handle positioning via data-scroll-sticky */
+}
+
+@keyframes navSlideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Nav Container */
+.nav-container {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 100px;
+}
+
+/* Scroll State - Keep consistent thickness */
+/* Removed scroll-based padding changes for consistent navbar thickness */
+
+/* Logo Animation */
+.nav-logo {
+  position: relative;
+}
+
+/* Nav Links */
+.nav-link {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-link.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+/* Contact CTA Button */
+.nav-cta {
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.nav-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-cta:hover::before {
+  opacity: 1;
+}
+
+.nav-cta:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Menu */
+#mobile-menu.open {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.mobile-nav-link {
+  animation: fadeInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+#mobile-menu.open .mobile-nav-link:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+#mobile-menu.open .mobile-nav-link:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+#mobile-menu.open .mobile-nav-link:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+#mobile-menu.open .mobile-nav-link:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+#mobile-menu.open .mobile-nav-link:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+#mobile-menu.open .mobile-nav-link:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Menu Toggle Animation */
+#mobile-menu-toggle {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobile-menu-toggle.open {
+  transform: rotate(90deg);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  #main-nav {
+    top: 0.75rem;
+    width: 92%;
+  }
+
+  .nav-container {
+    padding: 0.625rem 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #main-nav {
+    top: 0.5rem;
+    width: 95%;
+  }
+
+  .nav-container {
+    padding: 0.5rem 0.875rem;
+  }
+
+  .nav-cta {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .nav-logo {
+    font-size: 0.75rem;
+  }
+
+  .nav-logo>div {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* Dropdown Menu Styles */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-trigger {
+  cursor: pointer;
+}
+
+.nav-dropdown-trigger i,
+.nav-dropdown-trigger svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-dropdown-menu {
+  z-index: 1000;
+  margin-top: 1.25rem;
+}
+
+/* Invisible bridge to maintain hover state across the gap */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -1.25rem;
+  left: 0;
+  right: 0;
+  height: 1.25rem;
+  background: transparent;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.nav-dropdown:hover .nav-dropdown-trigger i,
+.nav-dropdown:hover .nav-dropdown-trigger svg {
+  transform: rotate(180deg);
+}
+
+.dropdown-item {
+  white-space: nowrap;
+}
+
+/* Mobile Tools Submenu */
+.mobile-tools-trigger {
+  cursor: pointer;
+}
+
+.mobile-tools-trigger i,
+.mobile-tools-trigger svg {
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.mobile-tools-trigger.open i,
+.mobile-tools-trigger.open svg {
+  transform: rotate(180deg);
+}
+
+/* Accessibility */
+.nav-link:focus,
+.mobile-nav-link:focus,
+.nav-cta:focus,
+#mobile-menu-toggle:focus,
+.dropdown-item:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Smooth color transitions */
+.nav-link,
+.mobile-nav-link,
+.dropdown-item {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}

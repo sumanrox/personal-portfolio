@@ -1,0 +1,46 @@
+/**
+ * Main CSS - Modular Architecture
+ * Imports all component-specific stylesheets
+ * 
+ * To customize:
+ * - Edit individual component CSS files in /components/
+ * - Add new component stylesheets as needed
+ * - Import order matters (base styles first)
+ */
+
+/* Theme configuration - MUST BE FIRST */
+@import url('theme.css');
+
+/* Base styles & reset */
+@import url('components/base.css');
+
+/* Loader animation */
+@import url('components/loader.css');
+
+/* Accessibility improvements */
+@import url('components/accessibility.css');
+
+/* Micro-interactions and UX enhancements */
+@import url('components/micro-interactions.css');
+
+/* Component-specific styles */
+@import url('components/navigation.css');
+@import url('components/hero.css');
+@import url('components/timeline.css');
+@import url('components/footer.css');
+@import url('components/footer-cta-animation.css');
+@import url('components/animations.css');
+@import url('components/projects.css?v=7');
+@import url('components/testimonials.css');
+@import url('components/pill-headers.css');
+@import url('components/logo-carousel.css');
+@import url('components/services.css');
+@import url('components/experience.css');
+@import url('components/work.css');
+@import url('components/faq.css');
+@import url('components/contact.css');
+@import url('components/back-to-top.css');
+@import url('components/pull-to-refresh.css');
+
+/* Legacy styles - will be migrated to components */
+/* These are temporary and should be moved to appropriate component files */

@@ -1,0 +1,28 @@
+{
+  "__comment": "=== HERO SECTION CONFIGURATION ===",
+  "__usage": "Change primary/secondary colors below to update ALL hero elements",
+  "theme": {
+    "__comment": "Main theme colors - Change these to update everything",
+    "primary": "#000000",
+    "secondary": "#ffffff",
+    "accent": "#22c55e",
+    "invertColors": true
+  },
+  "video": {
+    "enabled": true,
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "desktop": "assets/video/hero-video.mp4",
+    "tablet": "assets/video/hero-mobile.mp4",
+    "mobile": {
+      "enabled": false,
+      "path": "assets/video/hero-mobile.mp4"
+    },
+    "overlay": {
+      "enabled": false,
+      "opacity": 0.7,
+      "useSecondaryColor": true
+    }
+  }
+}

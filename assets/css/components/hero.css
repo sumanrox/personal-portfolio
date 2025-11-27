@@ -1,0 +1,332 @@
+/* Hero Section Styles */
+
+#hero-section {
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+
+/* Video Background Container */
+.hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Video Element */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Video Overlay */
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  transition: background-color 0.5s ease;
+}
+
+/* Ensure content is above video */
+#hero-section>.max-w-7xl {
+  position: relative;
+  z-index: 10;
+}
+
+/* Smooth color transitions for all hero elements */
+.hero-line-1,
+.hero-line-2,
+.hero-line-3,
+.hero-description,
+.hero-subheading span,
+.hero-badge,
+.stat-card,
+.hero-cta a {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Prevent button movement on hover */
+.hero-cta a {
+  position: relative;
+  will-change: color, background-color, border-color;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Ensure button doesn't shift due to any transforms */
+.hero-cta a:hover {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Badge hover using CSS variables */
+.hero-badge:hover {
+  background-color: var(--badge-hover-bg, #000000) !important;
+  color: var(--badge-hover-text, #ffffff) !important;
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  #hero-section {
+    padding-top: 8rem !important;
+    padding-bottom: 4rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* Beautiful heading with better hierarchy */
+  #hero-section h1 {
+    font-size: 3rem !important;
+    /* 48px - more impact */
+    line-height: 1 !important;
+    margin-bottom: 2rem !important;
+    letter-spacing: -0.04em !important;
+    font-weight: 800 !important;
+  }
+
+  .hero-heading {
+    margin-bottom: 2.5rem !important;
+  }
+
+  .hero-line-1,
+  .hero-line-2,
+  .hero-line-3 {
+    display: block !important;
+    margin-bottom: 0.15rem !important;
+  }
+
+  /* Subheading - elegant and refined */
+  .hero-subheading {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    gap: 0.75rem !important;
+  }
+
+  .hero-subheading>div {
+    width: 2.5rem !important;
+    height: 2px !important;
+  }
+
+  .hero-subheading span {
+    font-size: 8.5px !important;
+    letter-spacing: 0.2em !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Description - perfect spacing to prevent overlap */
+  .hero-description {
+    font-size: 1rem !important;
+    /* 16px - readable */
+    line-height: 1.7 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    max-width: 100% !important;
+    padding-right: 0 !important;
+  }
+
+  /* Badge - beautiful and compact */
+  .hero-badge {
+    margin-top: 1.25rem !important;
+    margin-bottom: 0 !important;
+    padding: 0.625rem 0.875rem !important;
+    font-size: 9px !important;
+    gap: 0.5rem !important;
+    border-radius: 0.25rem !important;
+  }
+
+  .hero-badge div {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  .hero-badge span {
+    font-size: 9px !important;
+  }
+
+  /* Stats section - elegant mobile grid */
+  .hero-stats {
+    margin-top: 2.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .hero-stats .grid {
+    gap: 0.625rem !important;
+  }
+
+  .stat-card {
+    padding: 0.875rem !important;
+    border-radius: 0.375rem !important;
+  }
+
+  .stat-card .text-\[8px\] {
+    font-size: 7.5px !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  .stat-card .w-4 {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
+  .stat-card .text-3xl,
+  .stat-card .text-4xl {
+    font-size: 1.75rem !important;
+    /* 28px - more prominent */
+    line-height: 1 !important;
+    font-weight: 700 !important;
+  }
+
+  /* CTA buttons - beautiful and touch-friendly */
+  .hero-cta {
+    margin-top: 0 !important;
+    gap: 0.875rem !important;
+  }
+
+  .hero-cta a {
+    padding: 1.125rem 1.75rem !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+    width: 100% !important;
+    justify-content: center !important;
+    border-radius: 0.5rem !important;
+    font-weight: 700 !important;
+  }
+
+  .hero-cta a svg {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
+  .hero-cta a span {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+  }
+
+  /* Add subtle shadow for depth */
+  .stat-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .hero-cta a {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+/* Tablet adjustments - refined */
+@media (min-width: 641px) and (max-width: 1023px) {
+  #hero-section {
+    padding-top: 9rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  #hero-section h1 {
+    font-size: 4rem !important;
+    line-height: 0.95 !important;
+  }
+
+  .hero-description {
+    font-size: 1.125rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .stat-card .text-3xl,
+  .stat-card .text-4xl {
+    font-size: 2rem !important;
+  }
+}
+
+/* Grid Overlay */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+}
+
+/* Hero Heading */
+.hero-heading {
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: #000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text-line {
+  display: block;
+}
+
+.stat-item {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Remove expensive effects on mobile */
+@media (max-width: 768px) {
+  .stat-item {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 3.5rem;
+  }
+
+  .hero-orb {
+    filter: blur(60px);
+  }
+
+  .hero-orb-1,
+  .hero-orb-2,
+  .hero-orb-3 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .stat-item {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

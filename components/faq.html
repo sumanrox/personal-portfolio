@@ -1,0 +1,137 @@
+<!-- FAQ Section - Minimal Brutalist -->
+<section id="faq" class="relative w-full py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
+  <div class="max-w-7xl w-full mx-auto">
+
+    <!-- Header -->
+    <div class="mb-20">
+      <div id="faq-pill-container" class="mb-6">
+        <div class="pill-section-header" data-text="FAQ">
+          <!-- Pill content -->
+          <div class="pill-content">
+            <span id="faq-triangle" class="pill-element triangle">▶</span>
+            <span id="faq-open-bracket" class="pill-element bracket">[</span>
+            <span id="faq-pill-text" class="pill-element text">FAQ</span>
+            <span id="faq-close-bracket" class="pill-element bracket">]</span>
+          </div>
+        </div>
+      </div>
+      <h2 class="text-5xl md:text-7xl font-bold tracking-tighter text-black leading-[0.9] capitalize font-manrope">
+        frequently<br>asked
+      </h2>
+    </div>
+
+    <!-- FAQ Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 no-auto-anim">
+
+      <!-- FAQ Item 1 -->
+      <div
+        class="faq-card group relative bg-white border border-black/10 hover:border-black transition-all duration-300 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] cursor-pointer"
+        data-faq-id="faq-1"
+        onclick="event.stopPropagation(); toggleFAQ(this);">
+        <div class="p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-xl font-bold font-manrope pr-4">What services do you offer?</h3>
+            <i data-lucide="plus"
+              class="faq-icon w-6 h-6 flex-shrink-0 transition-transform duration-300 group-hover:rotate-90"></i>
+          </div>
+          <div class="faq-answer hidden pt-4 text-gray-700 leading-relaxed font-manrope">
+            <p>I specialize in penetration testing, vulnerability assessments, bug bounty hunting, and security audits.
+              I work with web applications, APIs, cloud infrastructure, and mobile applications.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div
+        class="faq-card group relative bg-white border border-black/10 hover:border-black transition-all duration-300 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] cursor-pointer"
+        data-faq-id="faq-2"
+        onclick="event.stopPropagation(); toggleFAQ(this);">
+        <div class="p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-xl font-bold font-manrope pr-4">How do I engage your services?</h3>
+            <i data-lucide="plus"
+              class="faq-icon w-6 h-6 flex-shrink-0 transition-transform duration-300 group-hover:rotate-90"></i>
+          </div>
+          <div class="faq-answer hidden pt-4 text-gray-700 leading-relaxed font-manrope">
+            <p>Contact me via the form below or email directly. We'll schedule a consultation to discuss your security
+              needs, scope, timeline, and deliverables.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div
+        class="faq-card group relative bg-white border border-black/10 hover:border-black transition-all duration-300 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] cursor-pointer"
+        data-faq-id="faq-3"
+        onclick="event.stopPropagation(); toggleFAQ(this);">
+        <div class="p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-xl font-bold font-manrope pr-4">What is your turnaround time?</h3>
+            <i data-lucide="plus"
+              class="faq-icon w-6 h-6 flex-shrink-0 transition-transform duration-300 group-hover:rotate-90"></i>
+          </div>
+          <div class="faq-answer hidden pt-4 text-gray-700 leading-relaxed font-manrope">
+            <p>Project timelines vary based on scope. A typical web application assessment takes 1-2 weeks. Rush
+              projects can be accommodated with advance notice.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div
+        class="faq-card group relative bg-white border border-black/10 hover:border-black transition-all duration-300 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] cursor-pointer"
+        data-faq-id="faq-4"
+        onclick="event.stopPropagation(); toggleFAQ(this);">
+        <div class="p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-xl font-bold font-manrope pr-4">Do you sign NDAs?</h3>
+            <i data-lucide="plus"
+              class="faq-icon w-6 h-6 flex-shrink-0 transition-transform duration-300 group-hover:rotate-90"></i>
+          </div>
+          <div class="faq-answer hidden pt-4 text-gray-700 leading-relaxed font-manrope">
+            <p>Yes, absolutely. All client information and findings are kept strictly confidential. I'm happy to sign
+              NDAs and work agreements before any engagement begins.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div
+        class="faq-card group relative bg-white border border-black/10 hover:border-black transition-all duration-300 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] cursor-pointer"
+        data-faq-id="faq-5"
+        onclick="event.stopPropagation(); toggleFAQ(this);">
+        <div class="p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-xl font-bold font-manrope pr-4">What's in the final report?</h3>
+            <i data-lucide="plus"
+              class="faq-icon w-6 h-6 flex-shrink-0 transition-transform duration-300 group-hover:rotate-90"></i>
+          </div>
+          <div class="faq-answer hidden pt-4 text-gray-700 leading-relaxed font-manrope">
+            <p>You'll receive a comprehensive report including an executive summary, detailed findings with CVSS scores,
+              proof-of-concept exploits, and actionable remediation recommendations.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div
+        class="faq-card group relative bg-white border border-black/10 hover:border-black transition-all duration-300 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] cursor-pointer"
+        data-faq-id="faq-6"
+        onclick="event.stopPropagation(); toggleFAQ(this);">
+        <div class="p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-xl font-bold font-manrope pr-4">Do you provide remediation support?</h3>
+            <i data-lucide="plus"
+              class="faq-icon w-6 h-6 flex-shrink-0 transition-transform duration-300 group-hover:rotate-90"></i>
+          </div>
+          <div class="faq-answer hidden pt-4 text-gray-700 leading-relaxed font-manrope">
+            <p>Yes! I provide technical guidance, code reviews for fixes, and retesting services to verify
+              vulnerabilities have been properly addressed.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

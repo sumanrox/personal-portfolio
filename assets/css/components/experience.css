@@ -1,0 +1,55 @@
+/* Experience Section Styles - Minimal Brutalist */
+
+/* Entry Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.no-auto-anim>div {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    /* Start hidden */
+}
+
+.no-auto-anim>div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.no-auto-anim>div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.no-auto-anim>div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.no-auto-anim>div:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Rainbow Animation for Current Role */
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-rainbow {
+    animation: rainbow 3s ease-in-out infinite;
+}
