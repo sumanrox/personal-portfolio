@@ -201,6 +201,8 @@ export class PillHeadersController {
     });
 
     // Use IntersectionObserver for all pills (works with native scroll)
+    // Mobile-friendly: trigger earlier on mobile devices
+    const isMobile = window.innerWidth < 768;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting && !pillData.animated && !pillData.isAnimating) {
@@ -211,8 +213,8 @@ export class PillHeadersController {
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -20% 0px'
+      threshold: isMobile ? 0.05 : 0.1,
+      rootMargin: isMobile ? '0px 0px -10% 0px' : '0px 0px -20% 0px'
     });
 
     observer.observe(section);

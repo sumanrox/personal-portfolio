@@ -60,8 +60,8 @@
     position: fixed;
     bottom: 6.5rem;
     right: 1.5rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     color: white;
     border-radius: 50%;
@@ -93,4 +93,11 @@
 
 #floating-cta:active {
     transform: translateY(-2px) scale(1.02);
+}
+
+/* Hide floating CTA on desktop (md and above) */
+@media (min-width: 768px) {
+    #floating-cta {
+        display: none !important;
+    }
 }

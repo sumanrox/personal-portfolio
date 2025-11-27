@@ -13,15 +13,10 @@
     "autoplay": true,
     "loop": true,
     "muted": true,
-    "desktop": "assets/video/hero-video.mp4",
-    "tablet": "assets/video/hero-mobile.mp4",
-    "mobile": {
-      "enabled": false,
-      "path": "assets/video/hero-mobile.mp4"
-    },
+    "src": "assets/video/hero-video.mp4",
     "overlay": {
-      "enabled": false,
-      "opacity": 0.7,
+      "enabled": true,
+      "opacity": 0.3,
       "useSecondaryColor": true
     }
   }

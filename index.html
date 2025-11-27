@@ -44,7 +44,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=JetBrains+Mono:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=JetBrains+Mono:wght@400;700&family=Michroma&display=swap"
     rel="stylesheet">
 
   <!-- Tailwind CSS -->
@@ -174,13 +174,65 @@
   <!-- SEO: Hidden H1 for search engines -->
   <h1 class="sr-only">Suman Roy - Security Researcher | Penetration Testing & Bug Bounty Hunter</h1>
 
-  <!-- Loading Screen with 3D Orb Animation - DISABLED -->
+  <!-- Loading Screen -->
   <div id="page-loader"
-    class="fixed inset-0 bg-black z-[9999] flex items-center justify-center transition-opacity duration-500"
-    style="display: none;">
-    <div class="loader-orb-wrap"></div>
-    <div id="loader-text" class="loader-text">DECRYPTING</div>
+    class="fixed inset-0 bg-black z-[9999] transition-opacity duration-500" style="pointer-events: auto;">
+    
+    <!-- Background Video -->
+    <video id="page-loader-video" class="absolute inset-0 w-full h-full object-cover" muted loop playsinline preload="auto" style="display: none; opacity: 0.6; pointer-events: none;">
+      <source src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <!-- Loader Container -->
+    <div id="loader-container" style="position: absolute; bottom: 3rem; left: 3rem; right: 3rem; display: flex; flex-direction: row; align-items: center; gap: 3rem; z-index: 10; opacity: 0; transition: opacity 0.5s ease;">
+      <!-- Counter -->
+      <div id="loader-text" class="text-white font-black" 
+           style="font-family: 'Michroma', sans-serif; 
+                  font-size: 10rem; 
+                  line-height: 1;
+                  flex-shrink: 0;">0%</div>
+      
+      <!-- Progress Bar -->
+      <div id="loader-progress-container" style="flex: 1;">
+        <div style="width: 100%; height: 4px; background: rgba(255, 255, 255, 0.2); border-radius: 9999px; overflow: hidden;">
+          <div id="loader-progress-bar" style="width: 0%; height: 100%; background: #ffffff; border-radius: 9999px; transition: width 0.1s linear;"></div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <style>
+    /* Prevent scrolling during page load */
+    body.loading {
+      overflow: hidden !important;
+      height: 100vh !important;
+      position: fixed !important;
+      width: 100% !important;
+    }
+    
+    @media (max-width: 768px) {
+      #loader-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem !important;
+        bottom: 50% !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translate(-50%, 50%) !important;
+        width: auto !important;
+      }
+      
+      #loader-text {
+        font-size: 4rem !important;
+      }
+      
+      #loader-progress-container {
+        width: 80vw !important;
+        max-width: 300px !important;
+      }
+    }
+  </style>
 
   <!-- Skip to main content for keyboard navigation -->
   <a href="#main-content"

@@ -1,11 +1,18 @@
 /* Custom styles for character-by-character animation */
 html {
   overflow-x: hidden;
-  scroll-behavior: smooth;
   scrollbar-width: none;
   /* Firefox */
   -ms-overflow-style: none;
   /* IE and Edge */
+  -webkit-overflow-scrolling: touch; /* Smooth momentum scrolling on iOS */
+}
+
+/* Smooth scroll only on desktop */
+@media (min-width: 769px) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 html::-webkit-scrollbar {

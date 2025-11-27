@@ -136,8 +136,11 @@ export class HeroVideoController {
             el.style.color = colors.secondary;
         });
 
-        // Stat card labels
-        this.applyToElements('.stat-card .text-\\[8px\\]', el => {
+        // Stat card labels - more specific selectors
+        this.applyToElements('.stat-card div[class*="text-[7px]"]', el => {
+            el.style.color = this.withOpacity(colors.secondary, 0.6);
+        });
+        this.applyToElements('.stat-card div[class*="text-[8px]"]', el => {
             el.style.color = this.withOpacity(colors.secondary, 0.6);
         });
 
@@ -146,8 +149,8 @@ export class HeroVideoController {
             el.style.color = this.withOpacity(colors.secondary, 0.6);
         });
 
-        // Stat card numbers
-        this.applyToElements('.stat-card .text-3xl, .stat-card .text-4xl', el => {
+        // Stat card numbers - all text size variants
+        this.applyToElements('.stat-card .text-2xl, .stat-card .text-3xl, .stat-card .text-4xl, .stat-card div[class*="font-bold"][class*="font-mono"]', el => {
             el.style.color = colors.secondary;
         });
 
@@ -236,21 +239,10 @@ export class HeroVideoController {
      * Initialize video background
      */
     initVideo() {
-        let videoPath, enabled;
-
-        if (this.currentDevice === 'desktop') {
-            videoPath = this.config.video.desktop;
-            enabled = true;
-        } else if (this.currentDevice === 'tablet') {
-            videoPath = this.config.video.tablet;
-            enabled = true;
-        } else {
-            videoPath = this.config.video.mobile.path;
-            enabled = this.config.video.mobile.enabled;
-        }
-
-        if (!enabled) {
-            console.log(`Video disabled for ${this.currentDevice}`);
+        const videoPath = this.config.video.src;
+        
+        if (!videoPath) {
+            console.log('No video source configured');
             return;
         }
 
@@ -313,23 +305,14 @@ export class HeroVideoController {
      * Setup window resize handler
      */
     setupResizeHandler() {
+        // No need to reload video on resize since we use single video for all devices
         let resizeTimeout;
-        let previousDevice = this.currentDevice;
 
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => {
-                const newDevice = this.detectDevice();
-
-                if (newDevice !== previousDevice) {
-                    console.log(`Device changed: ${previousDevice} → ${newDevice}`);
-                    previousDevice = newDevice;
-                    this.currentDevice = newDevice;
-
-                    if (this.config.video.enabled) {
-                        this.initVideo();
-                    }
-                }
+                // Just update device detection for potential future use
+                this.currentDevice = this.detectDevice();
             }, 500);
         });
     }
@@ -347,9 +330,7 @@ export class HeroVideoController {
             },
             video: {
                 enabled: false,
-                desktop: '',
-                tablet: '',
-                mobile: { enabled: false, path: '' },
+                src: '',
                 overlay: { enabled: false }
             }
         };

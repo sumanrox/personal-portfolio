@@ -1,0 +1,36 @@
+{
+  "__comment": "=== SERVICES SECTION CONFIGURATION ===",
+  "__usage": "Configure services section appearance and CTA background video",
+  "cta": {
+    "__comment": "Enhanced CTA section at the bottom of services",
+    "theme": {
+      "__comment": "Color inversion - set invertColors to true for dark theme (white text on dark bg)",
+      "invertColors": true
+    },
+    "video": {
+      "enabled": true,
+      "autoplay": true,
+      "loop": true,
+      "muted": true,
+      "src": "assets/video/ecta.mp4",
+      "overlay": {
+        "enabled": true,
+        "opacity": 0.5,
+        "color": "#000000"
+      }
+    },
+    "text": {
+      "badge": "AVAILABLE FOR PROJECTS",
+      "heading": "Let's Build<br>Secure Systems",
+      "description": "Ready to fortify your digital infrastructure? Let's discuss how I can help secure your applications.",
+      "primaryButton": {
+        "text": "Start a Project",
+        "link": "#contact"
+      },
+      "secondaryButton": {
+        "text": "View Work",
+        "link": "#work"
+      }
+    }
+  }
+}

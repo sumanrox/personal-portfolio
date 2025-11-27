@@ -3,6 +3,7 @@
  * Initializes all components and animations
  */
 
+import { initPageLoader } from './components/pageLoader.js';
 import { initializeContent } from './config.js';
 import { initNavigation } from './components/navigation.js';
 // DISABLED: Locomotive Scroll causing issues
@@ -31,10 +32,14 @@ import { initContactEnhancements } from './components/contactEnhancements.js';
 import { initWorkThreeBackground } from './components/workThreeBackground.js';
 import { initFAQPillHeader } from './components/faqPillHelper.js';
 import { initFooterCtaAnimation } from './components/footerCtaAnimation.js';
+import { initServicesConfig } from './components/servicesConfig.js';
 // FAQ toggle is now inline in the FAQ component
 import './components/heroThree.js'; // Hero video initialization happens here
 
 (function () {
+  // Initialize page loader first
+  initPageLoader();
+  
   // Register GSAP plugins
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -77,6 +82,7 @@ import './components/heroThree.js'; // Hero video initialization happens here
       try { initRotatingTestimonials(); } catch (e) { console.error('Error initializing Rotating Testimonials:', e); }
       try { initContactEnhancements(); } catch (e) { console.error('Error initializing Contact Enhancements:', e); }
       try { initWorkThreeBackground(); } catch (e) { console.error('Error initializing Work Three Background:', e); }
+      try { initServicesConfig(); } catch (e) { console.error('Error initializing Services Config:', e); }
       // Footer CTA Animation initialized with delay (line ~73)
       // FAQ toggle is now inline in the FAQ component - no initialization needed
 

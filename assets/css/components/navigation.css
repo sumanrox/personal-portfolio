@@ -39,6 +39,22 @@
 /* Logo Animation */
 .nav-logo {
   position: relative;
+  pointer-events: auto;
+  transition: none !important;
+}
+
+.nav-logo:hover {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.nav-logo * {
+  transition: none !important;
+}
+
+.nav-logo *:hover {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* Nav Links */
@@ -167,8 +183,8 @@
   }
 
   .nav-logo>div {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
   }
 }
 

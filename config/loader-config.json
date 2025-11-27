@@ -1,0 +1,19 @@
+{
+  "video": {
+    "enabled": true,
+    "src": "assets/video/loading.mp4",
+    "opacity": 1
+  },
+  "counter": {
+    "duration": 4000,
+    "font": "Michroma",
+    "fontSize": "10rem",
+    "color": "#ffffff"
+  },
+  "progressBar": {
+    "enabled": true,
+    "color": "#ffffff",
+    "height": "4px",
+    "borderRadius": "9999px"
+  }
+}
