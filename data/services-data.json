@@ -1,111 +1,111 @@
 {
-    "header": {
-        "pillText": "SERVICES",
-        "title": "Premium<br>Security<br>Services"
+  "header": {
+    "pillText": "SERVICES",
+    "title": "Premium<br>Security<br>Services"
+  },
+  "description": {
+    "main": "Specialized security services tailored for modern organizations. I focus on deep manual analysis, secure code review, and targeted penetration testing to help build resilient and secure systems.",
+    "trustedBy": [
+      "// SECURING GOVERNMENT SYSTEMS",
+      "// REAL-WORLD VULNERABILITY RESEARCH",
+      "// STRONG MANUAL ANALYSIS APPROACH"
+    ]
+  },
+  "services": [
+    {
+      "id": "01",
+      "title": "Penetration<br>Testing",
+      "description": "Web, network, and Active Directory security assessments with a focus on real-world attack paths and high-impact vulnerabilities. Includes detailed reporting and prioritized remediation steps.",
+      "icon": "shield",
+      "featured": true,
+      "tags": [
+        "Web Applications",
+        "APIs (In Development)",
+        "Network & AD Security"
+      ],
+      "certification": "CEH CERTIFIED"
     },
-    "description": {
-        "main": "Comprehensive security solutions engineered for modern enterprises. From penetration testing to strategic consulting, I secure your digital infrastructure with precision and expertise.",
-        "trustedBy": [
-            "// TRUSTED BY FORTUNE 500",
-            "// 200+ SUCCESSFUL AUDITS",
-            "// ZERO BREACH RECORD"
-        ]
+    {
+      "id": "02",
+      "title": "Source Code<br>Analysis",
+      "description": "In-depth manual secure code review across multiple languages to uncover complex logic flaws, insecure patterns, and potential CVE-level issues. Backed by experience contributing to SAST research.",
+      "icon": "file-code",
+      "tags": [
+        "SAST",
+        "MULTI-LANGUAGE REVIEW",
+        "CODE QUALITY & SECURITY"
+      ]
     },
-    "services": [
-        {
-            "id": "01",
-            "title": "Penetration<br>Testing",
-            "description": "Elite security assessments simulating sophisticated real-world attacks to identify vulnerabilities before malicious actors do. Comprehensive reporting with actionable remediation strategies.",
-            "icon": "shield",
-            "featured": true,
-            "tags": [
-                "Web Applications & APIs",
-                "Network Infrastructure",
-                "Mobile & IoT Devices"
-            ],
-            "certification": "CEH CERTIFIED"
-        },
-        {
-            "id": "02",
-            "title": "Source Code<br>Analysis",
-            "description": "Comprehensive source code reviews identifying security vulnerabilities, code quality issues, and compliance gaps with detailed remediation guidance.",
-            "icon": "file-code",
-            "tags": [
-                "STATIC ANALYSIS",
-                "CODE QUALITY",
-                "SAST"
-            ]
-        },
-        {
-            "id": "03",
-            "title": "Security<br>Consulting",
-            "description": "Strategic guidance on security architecture, policy development, and risk management for building resilient security programs.",
-            "icon": "brain",
-            "tags": [
-                "STRATEGY",
-                "ARCHITECTURE",
-                "RISK"
-            ]
-        },
-        {
-            "id": "04",
-            "title": "Exploit<br>Development",
-            "description": "Custom exploit development and proof-of-concept creation demonstrating real-world attack scenarios and vulnerability impact.",
-            "icon": "code",
-            "tags": [
-                "POC CREATION",
-                "0-DAY"
-            ]
-        },
-        {
-            "id": "05",
-            "title": "Threat<br>Modeling",
-            "description": "Proactive identification of potential threats and attack vectors specific to your application architecture and business context.",
-            "icon": "radar",
-            "tags": [
-                "STRIDE",
-                "DREAD",
-                "ATTACK TREES"
-            ]
-        }
-    ],
-    "cta": {
-        "theme": {
-            "invertColors": true
-        },
-        "video": {
-            "enabled": true,
-            "autoplay": true,
-            "loop": true,
-            "muted": true,
-            "src": "assets/video/ecta.mp4",
-            "overlay": {
-                "enabled": true,
-                "opacity": 0.5,
-                "color": "#000000"
-            }
-        },
-        "badge": "AVAILABLE FOR PROJECTS",
-        "title": "Let's Build<br>Secure Systems",
-        "description": "Ready to fortify your digital infrastructure? Let's discuss how I can help secure your applications.",
-        "buttons": [
-            {
-                "text": "Start a Project",
-                "link": "#contact",
-                "icon": "arrow-right",
-                "primary": true
-            },
-            {
-                "text": "View Work",
-                "link": "#work",
-                "icon": "arrow-up-right",
-                "primary": false
-            }
-        ],
-        "trustIndicators": [
-            "CEH Certified",
-            "200+ Audits",
-            "Zero Breaches"
-        ]
+    {
+      "id": "03",
+      "title": "Security<br>Consulting",
+      "description": "Guidance on improving application security, strengthening internal processes, and aligning your organization with modern security best practices. Ideal for teams building or scaling their security program.",
+      "icon": "brain",
+      "tags": [
+        "BEST PRACTICES",
+        "ARCHITECTURE GUIDANCE",
+        "RISK REDUCTION"
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Exploit<br>Development",
+      "description": "Development of custom proof-of-concept exploits to demonstrate vulnerability impact, aid internal remediation, and support research initiatives.",
+      "icon": "code",
+      "tags": [
+        "POC DEVELOPMENT",
+        "RESEARCH SUPPORT"
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Threat<br>Modeling",
+      "description": "Identify attack surfaces and potential weaknesses across your application architecture. Tailored for startups, SaaS platforms, and teams planning secure releases.",
+      "icon": "radar",
+      "tags": [
+        "ATTACK SURFACE ANALYSIS",
+        "ARCHITECTURE REVIEW",
+        "THREAT IDENTIFICATION"
+      ]
     }
+  ],
+  "cta": {
+    "theme": {
+      "invertColors": true
+    },
+    "video": {
+      "enabled": true,
+      "autoplay": true,
+      "loop": true,
+      "muted": true,
+      "src": "assets/video/ecta.mp4",
+      "overlay": {
+        "enabled": true,
+        "opacity": 0.5,
+        "color": "#000000"
+      }
+    },
+    "badge": "AVAILABLE FOR PROJECTS",
+    "title": "Let's Build<br>Secure Systems",
+    "description": "Strengthen your applications with expert manual security analysis. From code review to penetration testing, let's secure your environment the right way.",
+    "buttons": [
+      {
+        "text": "Start a Project",
+        "link": "#contact",
+        "icon": "arrow-right",
+        "primary": true
+      },
+      {
+        "text": "View Work",
+        "link": "#work",
+        "icon": "arrow-up-right",
+        "primary": false
+      }
+    ],
+    "trustIndicators": [
+      "CEH Certified",
+      "Government Experience",
+      "Deep Manual Testing"
+    ]
+  }
 }

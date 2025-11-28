@@ -5,13 +5,13 @@
     "title": "About"
   },
   "description": [
-    "Protecting enterprises from advanced threats through comprehensive security assessments. 6+ years of elite consulting experience specializing in web applications, APIs, and cloud infrastructure.",
-    "I provide tailored security solutions for Fortune 500 companies and high-growth startups. My consultations have prevented critical data breaches, secured sensitive infrastructure, and established robust security frameworks that protect millions of users."
+    "Cybersecurity Researcher and Consultant specializing in Web Security, Secure Code Review, Malware Analysis, and Vulnerability Assessment. I help organizations strengthen their security posture through detailed manual analysis and real-world offensive security techniques.",
+    "With experience securing 25+ government platforms and supporting private organizations under NDA, I focus on identifying high-impact vulnerabilities, improving code quality, and building stronger defensive controls. My expertise spans OWASP Top 10, network and Active Directory assessments, IoT security, and multi-language static analysis."
   ],
   "stats": [
-    { "value": 50, "suffix": "+ Clients", "target": 50 },
-    { "value": 200, "suffix": "+ Audits", "target": 200 },
-    { "value": 99, "suffix": "% Success", "target": 99 }
+    { "value": 25, "suffix": "+ Govt Orgs Secured", "target": 25 },
+    { "value": 4, "suffix": "+ Years Experience", "target": 4 },
+    { "value": 100, "suffix": "% Manual Analysis", "target": 100 }
   ],
   "skills": {
     "header": {
@@ -20,11 +20,11 @@
     },
     "items": [
       { "name": "Web App Security", "percentage": 95 },
-      { "name": "API Security", "percentage": 92 },
+      { "name": "API Security (Developing)", "percentage": 70 },
       { "name": "Penetration Testing", "percentage": 88 },
-      { "name": "Cloud Security", "percentage": 85 }
+      { "name": "Secure Code Review / SAST", "percentage": 92 }
     ],
-    "certifications": ["OSCP", "OSWE", "CEH", "GXPN"]
+    "certifications": ["CEH v12", "Cisco Cybersecurity Analyst", "Oracle Cloud"]
   },
   "arsenal": {
     "header": {
@@ -32,23 +32,24 @@
       "title": "Arsenal"
     },
     "tools": [
-      "Burp Suite Pro",
-      "Metasploit Framework",
+      "Burp Suite Community",
       "OWASP ZAP",
       "Nmap",
       "Wireshark",
+      "MobSF",
+      "Ghidra",
       "Python & Bash",
-      "Docker & Kubernetes",
-      "AWS & Azure",
+      "Docker (Breakouts)",
       "SQLMap & Nuclei",
-      "Ghidra & IDA Pro"
+      "Git & CI Pipelines",
+      "Kali Linux"
     ],
     "specializations": [
-      "Web Application Security",
-      "Network Penetration Testing",
-      "Vulnerability Research",
-      "API Security Testing",
-      "Cloud Security (AWS/GCP)"
+      "OWASP Top 10 Web Security",
+      "Secure Code Review (Java, Python, PHP, JS, Go, .NET, C/C++)",
+      "Network & Active Directory Pentesting",
+      "API Security (Learning & Practicing)",
+      "Malware Analysis (Static & Dynamic)"
     ]
   }
 }

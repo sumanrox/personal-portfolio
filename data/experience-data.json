@@ -1,97 +1,100 @@
 {
-    "header": {
-        "pillText": "EXPERIENCE",
-        "title": "professional<br>experience",
-        "subtitle": [
-            "// ELITE CONSULTING",
-            "// RED TEAM OPERATIONS",
-            "// SECURITY RESEARCH"
-        ]
-    },
-    "experience": [
-        {
-            "role": "Independent Security Researcher",
-            "company": null,
-            "duration": "2023 - PRESENT",
-            "durationLabel": "2+ YEARS",
-            "description": "Full-time vulnerability research focusing on critical security flaws in enterprise platforms. Recognized in top bug bounty programs with substantial rewards and CVE attributions.",
-            "current": true,
-            "tags": [
-                "CVE Research",
-                "Bug Bounties",
-                "0-Day Exploits",
-                "Red Teaming"
-            ],
-            "stats": [
-                {
-                    "label": "CVEs Found",
-                    "value": "12+"
-                },
-                {
-                    "label": "Bounties",
-                    "value": "$50K+"
-                },
-                {
-                    "label": "Global Rank",
-                    "value": "Top 1%"
-                }
-            ]
-        },
-        {
-            "role": "Senior Penetration Tester",
-            "company": "SecureTech Solutions",
-            "duration": "2021 - 2023",
-            "badge": "SENIOR",
-            "badgeColor": "blue",
-            "icon": "shield-check",
-            "description": "Led comprehensive security assessments for Fortune 500 companies. Specialized in web applications, network infrastructure, and cloud security testing.",
-            "highlights": [
-                "50+ Enterprise Clients",
-                "Red Team Operations",
-                "Cloud Security Specialist"
-            ]
-        },
-        {
-            "role": "Security Analyst",
-            "company": "CyberGuard Inc.",
-            "duration": "2018 - 2021",
-            "badge": "ANALYST",
-            "badgeColor": "gray",
-            "icon": "radar",
-            "description": "Foundation role building cybersecurity expertise through incident response, vulnerability assessments, and security monitoring.",
-            "certifications": [
-                "CISSP",
-                "CEH",
-                "Python"
-            ]
-        },
-        {
-            "role": "Speaking & Community",
-            "company": "Community",
-            "type": "community",
-            "icon": "presentation",
-            "subtitle": "GIVING BACK TO THE COMMUNITY",
-            "link": {
-                "text": "View Talks",
-                "url": "#"
-            },
-            "items": [
-                {
-                    "title": "DEF CON Speaker",
-                    "description": "\"JWT Implementation Vulnerabilities\"",
-                    "icon": "award"
-                },
-                {
-                    "title": "BSides Regular",
-                    "description": "Austin, Dallas, Houston",
-                    "icon": "map-pin"
-                },
-                {
-                    "title": "CTF Competitor",
-                    "description": "Black Hat, Local Events",
-                    "icon": "flag"
-                }
-            ]
-        }
+  "header": {
+    "pillText": "EXPERIENCE",
+    "title": "professional<br>experience",
+    "subtitle": [
+      "// SECURITY RESEARCH",
+      "// SECURE CODE REVIEW",
+      "// ADVANCED VULNERABILITY ANALYSIS"
     ]
+  },
+  "experience": [
+    {
+      "role": "Independent Security Researcher & Consultant",
+      "company": null,
+      "duration": "2023 - PRESENT",
+      "durationLabel": "2+ YEARS",
+      "description": "Provide security assessments, secure code reviews, and vulnerability research across government platforms and private organizations under NDA. Discovered multiple high-impact vulnerabilities and contributed to CVE-level findings.",
+      "current": true,
+      "tags": [
+        "Secure Code Review",
+        "Exploit Automation",
+        "CVE Research",
+        "Web & Network Security"
+      ],
+      "stats": [
+        {
+          "label": "Govt Platforms Secured",
+          "value": "25+"
+        },
+        {
+          "label": "CVE Findings",
+          "value": "2"
+        },
+        {
+          "label": "CTF Challenges",
+          "value": "300+"
+        }
+      ]
+    },
+    {
+      "role": "Security Researcher",
+      "company": "LoginSoft Pvt Ltd",
+      "duration": "2024 - 2025",
+      "badge": "RESEARCH",
+      "badgeColor": "green",
+      "icon": "search",
+      "description": "Conducted in-depth vulnerability analysis across multi-language codebases used by major clients. Performed static code reviews, CVE correlation, and research contributing to tools similar to Checkmarx SCA and Snyk.",
+      "highlights": [
+        "Multi-language SAST and code review",
+        "CVE & non-CVE vulnerability correlation",
+        "Research across PHP, Python, Java, Go, Ruby, C/C++"
+      ],
+    "certifications": [
+        "CEH v12",
+        "Cisco Jr. Cybersecurity Analyst",
+        "Python Essentials"
+      ]
+    },
+    {
+      "role": "Senior Associate (Technical)",
+      "company": "Wipro Digital Operations",
+      "duration": "2019 - 2021",
+      "badge": "ASSOCIATE",
+      "badgeColor": "gray",
+      "icon": "radar",
+      "description": "Led technical troubleshooting, documentation, and root-cause analysis for enterprise clients. Mentored a team of 18 members and regularly ranked among the top performers in the project.",
+      "certifications": [
+        "Oracle Cloud"
+      ]
+    },
+    {
+      "role": "Community & Contributions",
+      "company": "Security Community",
+      "type": "community",
+      "icon": "presentation",
+      "subtitle": "LEARNING, SHARING & COLLABORATION",
+      "link": {
+        "text": "View Work",
+        "url": "#work"
+      },
+      "items": [
+        {
+          "title": "Open-Source Tools",
+          "description": "Creator of ReconFavicon & SideQuest Exploits — widely used in OSINT and CTF ecosystems.",
+          "icon": "code"
+        },
+        {
+          "title": "Technical Writing",
+          "description": "Published research articles on malware analysis, mobile app forensics, and scam infrastructure takedown.",
+          "icon": "edit"
+        },
+        {
+          "title": "CTF Participation",
+          "description": "Active competitor in online CTF platforms; solved dozens of challenges across web, crypto, forensics, and pwn.",
+          "icon": "flag"
+        }
+      ]
+    }
+  ]
 }

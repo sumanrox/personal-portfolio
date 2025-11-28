@@ -1,110 +1,110 @@
 {
-    "header": {
-        "pillText": "PROJECTS",
-        "title": "open source<br>contributions"
+  "header": {
+    "pillText": "PROJECTS",
+    "title": "open source<br>contributions"
+  },
+  "projects": [
+    {
+      "title": "ReconFavicon",
+      "description": "OSINT tool for identifying applications and tech stacks using favicon hashing. Used widely by researchers for recon and fingerprinting.",
+      "icon": "search",
+      "stats": {
+        "stars": "Popular"
+      },
+      "tags": [
+        "Active",
+        "Maintained"
+      ],
+      "tech": [
+        "PYTHON",
+        "OSINT"
+      ],
+      "link": "https://github.com/sumanrox/reconfavicon"
     },
-    "projects": [
-        {
-            "title": "ReconMaster Pro",
-            "description": "Advanced penetration testing framework with automated vulnerability detection.",
-            "icon": "terminal",
-            "stats": {
-                "stars": "2.4k"
-            },
-            "tags": [
-                "Active",
-                "Maintained"
-            ],
-            "tech": [
-                "PYTHON",
-                "SECURITY"
-            ],
-            "link": "https://github.com/sumanroy"
-        },
-        {
-            "title": "SubEnum Scanner",
-            "description": "High-performance subdomain enumeration with multi-threaded scanning.",
-            "icon": "search",
-            "stats": {
-                "stars": "1.8k"
-            },
-            "tags": [
-                "Featured"
-            ],
-            "tech": [
-                "GO",
-                "RECON"
-            ],
-            "link": "https://github.com/sumanroy"
-        },
-        {
-            "title": "CloudGuard Suite",
-            "description": "Cloud security toolkit for AWS, GCP, and Azure with compliance reporting.",
-            "icon": "cloud",
-            "stats": {
-                "stars": "956"
-            },
-            "tags": [
-                "Active"
-            ],
-            "tech": [
-                "NODE.JS",
-                "CLOUD"
-            ],
-            "link": "https://github.com/sumanroy"
-        },
-        {
-            "title": "APIFuzzer",
-            "description": "Blazing-fast API security scanner built with Rust for intelligent fuzzing.",
-            "icon": "zap",
-            "stats": {
-                "stars": "743"
-            },
-            "tags": [
-                "New",
-                "Trending"
-            ],
-            "tech": [
-                "RUST",
-                "API"
-            ],
-            "link": "https://github.com/sumanroy"
-        },
-        {
-            "title": "XSSHunter",
-            "description": "Advanced XSS detection and exploitation framework with real-time alerts.",
-            "icon": "code",
-            "stats": {
-                "stars": "612"
-            },
-            "tags": [
-                "Maintained"
-            ],
-            "tech": [
-                "JAVASCRIPT",
-                "XSS"
-            ],
-            "link": "https://github.com/sumanroy"
-        },
-        {
-            "title": "SQLNinja",
-            "description": "Automated SQL injection detection and exploitation toolkit with database fingerprinting.",
-            "icon": "database",
-            "stats": {
-                "stars": "489"
-            },
-            "tags": [
-                "Active"
-            ],
-            "tech": [
-                "PYTHON",
-                "SQLI"
-            ],
-            "link": "https://github.com/sumanroy"
-        }
-    ],
-    "footer": {
-        "text": "View all repositories",
-        "link": "https://github.com/sumanroy"
+    {
+      "title": "Xposed",
+      "description": "Automated exploitation framework designed for practicing and testing security vulnerabilities across multiple categories.",
+      "icon": "terminal",
+      "stats": {
+        "stars": "Growing"
+      },
+      "tags": [
+        "Active"
+      ],
+      "tech": [
+        "PYTHON",
+        "SECURITY"
+      ],
+      "link": "https://github.com/sumanrox/xposed"
+    },
+    {
+      "title": "Hasher",
+      "description": "Lightweight multi-algorithm hashing utility built for quick integrity checks, security testing, and forensic workflows.",
+      "icon": "hash",
+      "stats": {
+        "stars": "Stable"
+      },
+      "tags": [
+        "Utility"
+      ],
+      "tech": [
+        "PYTHON"
+      ],
+      "link": "https://github.com/sumanrox/hasher"
+    },
+    {
+      "title": "PRISM",
+      "description": "Modular penetration testing helper tool featuring recon, enumeration, and automation components for security workflows.",
+      "icon": "layers",
+      "stats": {
+        "stars": "Active"
+      },
+      "tags": [
+        "Recon",
+        "Automation"
+      ],
+      "tech": [
+        "PYTHON",
+        "SECURITY"
+      ],
+      "link": "https://github.com/sumanrox/PRISM"
+    },
+    {
+      "title": "Nmap XML Visualizer",
+      "description": "A clean, browser-based visualizer for Nmap XML outputs. Helps simplify port and service analysis with an interactive UI.",
+      "icon": "globe",
+      "stats": {
+        "stars": "Community"
+      },
+      "tags": [
+        "Visualization"
+      ],
+      "tech": [
+        "HTML",
+        "JAVASCRIPT"
+      ],
+      "link": "https://github.com/sumanrox/sumanrox.github.io"
+    },
+    {
+      "title": "FFUF Contribution",
+      "description": "Contributor to FFUF, one of the most respected fuzzing tools in cybersecurity. Helped improve codebase through an approved pull request.",
+      "icon": "git-pull-request",
+      "stats": {
+        "stars": "Upstream"
+      },
+      "tags": [
+        "Open Source",
+        "Contribution"
+      ],
+      "tech": [
+        "GO",
+        "FUZZING"
+      ],
+      "link": "https://github.com/ffuf/ffuf/pull/869"
     }
+  ],
+  "footer": {
+    "text": "View all repositories",
+    "link": "https://github.com/sumanrox"
+  }
 }
