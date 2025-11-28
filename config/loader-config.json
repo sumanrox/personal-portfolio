@@ -1,8 +1,8 @@
 {
   "video": {
     "enabled": true,
-    "src": "assets/video/loading.mp4",
-    "opacity": 1
+    "src": "assets/video/hero-video.mp4",
+    "opacity": 0.5
   },
   "counter": {
     "duration": 4000,
