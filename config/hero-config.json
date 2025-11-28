@@ -15,8 +15,8 @@
     "muted": true,
     "src": "assets/video/hero-video.mp4",
     "overlay": {
-      "enabled": false,
-      "opacity": 0.5,
+      "enabled": true,
+      "opacity": 0.1,
       "useSecondaryColor": true
     }
   }
