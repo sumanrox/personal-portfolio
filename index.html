@@ -8,9 +8,9 @@
 
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Security researcher specializing in penetration testing, vulnerability research, and bug bounty hunting. 12+ CVEs discovered, Top 1% on HackerOne." />
+    content="Suman Roy is a Certified Ethical Hacker and Offensive Security Expert based in Kolkata, serving clients globally. Specializing in Remote Penetration Testing, Security Audits, and Vulnerability Research for international enterprises." />
   <meta name="keywords"
-    content="security researcher, penetration testing, bug bounty, vulnerability research, ethical hacking, CVE, HackerOne" />
+    content="Hacker in Kolkata, Security Audit Firm in Kolkata, Certified Ethical Hacker, Offensive Security Expert, Penetration Testing Kolkata, VAPT Services, Bug Bounty Hunter, Suman Roy, Security Consultant India, Remote Security Consultant, Global VAPT Services, International Security Audit, Offensive Security Contractor" />
   <meta name="author" content="Suman Roy" />
   <meta name="theme-color" content="#000000" />
 
@@ -24,17 +24,84 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@sumanroy_sec" />
-  <meta name="twitter:title" content="Suman Roy — Security Researcher" />
+  <meta name="twitter:title" content="Suman Roy — Certified Hacker & Security Consultant" />
   <meta name="twitter:description"
-    content="Security researcher specializing in penetration testing and vulnerability research." />
+    content="Top-tier Security Researcher and Offensive Security Expert based in Kolkata. Providing premium Security Audit and VAPT services." />
+
+  <!-- JSON-LD Structured Data for Local SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://sumanroy.in/#service",
+          "name": "Suman Roy - Security Consultant",
+          "image": "https://sumanroy.in/assets/images/profile.jpg",
+          "description": "Premium Security Audit and Penetration Testing Firm based in Kolkata, specializing in Offensive Security and VAPT.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kolkata",
+            "addressRegion": "WB",
+            "addressCountry": "IN"
+          },
+          "areaServed": "World",
+          "availableLanguage": "English",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "22.5726",
+            "longitude": "88.3639"
+          },
+          "url": "https://sumanroy.in",
+          "telephone": "+91-9876543210",
+          "priceRange": "$$$",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          "sameAs": [
+            "https://github.com/sumanrox",
+            "https://hackerone.com/sumanrox",
+            "https://linkedin.com/in/sumanroy-security",
+            "https://twitter.com/sumanroy_sec"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://sumanroy.in/#person",
+          "name": "Suman Roy",
+          "jobTitle": "Certified Ethical Hacker & Security Researcher",
+          "url": "https://sumanroy.in",
+          "sameAs": [
+            "https://github.com/sumanrox",
+            "https://hackerone.com/sumanrox",
+            "https://linkedin.com/in/sumanroy-security",
+            "https://twitter.com/sumanroy_sec"
+          ],
+          "worksFor": {
+            "@id": "https://sumanroy.in/#service"
+          }
+        }
+      ]
+    }
+  </script>
 
   <!-- Security Note: For production, configure these as HTTP headers in your server config:
          - X-Content-Type-Options: nosniff
          - X-Frame-Options: DENY
          - X-XSS-Protection: 1; mode=block
          - Strict-Transport-Security: max-age=31536000; includeSubDomains
-         - Content-Security-Policy: [full CSP]
     -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com;">
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <!-- Performance: Preload critical CSS -->
@@ -175,28 +242,32 @@
   <h1 class="sr-only">Suman Roy - Security Researcher | Penetration Testing & Bug Bounty Hunter</h1>
 
   <!-- Loading Screen -->
-  <div id="page-loader"
-    class="fixed inset-0 bg-black z-[9999] transition-opacity duration-500" style="pointer-events: auto;">
-    
+  <div id="page-loader" class="fixed inset-0 bg-black z-[9999] transition-opacity duration-500"
+    style="pointer-events: auto;">
+
     <!-- Background Video -->
-    <video id="page-loader-video" class="absolute inset-0 w-full h-full object-cover" muted loop playsinline preload="auto" style="display: none; opacity: 0.6; pointer-events: none;">
+    <video id="page-loader-video" class="absolute inset-0 w-full h-full object-cover" muted loop playsinline
+      preload="auto" style="display: none; opacity: 0.6; pointer-events: none;">
       <source src="" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    
+
     <!-- Loader Container -->
-    <div id="loader-container" style="position: absolute; bottom: 3rem; left: 3rem; right: 3rem; display: flex; flex-direction: row; align-items: center; gap: 3rem; z-index: 10; opacity: 0; transition: opacity 0.5s ease;">
+    <div id="loader-container"
+      style="position: absolute; bottom: 3rem; left: 3rem; right: 3rem; display: flex; flex-direction: row; align-items: center; gap: 3rem; z-index: 10; opacity: 0; transition: opacity 0.5s ease;">
       <!-- Counter -->
-      <div id="loader-text" class="text-white font-black" 
-           style="font-family: 'Michroma', sans-serif; 
+      <div id="loader-text" class="text-white font-black" style="font-family: 'Michroma', sans-serif; 
                   font-size: 10rem; 
                   line-height: 1;
                   flex-shrink: 0;">0%</div>
-      
+
       <!-- Progress Bar -->
       <div id="loader-progress-container" style="flex: 1;">
-        <div style="width: 100%; height: 4px; background: rgba(255, 255, 255, 0.2); border-radius: 9999px; overflow: hidden;">
-          <div id="loader-progress-bar" style="width: 0%; height: 100%; background: #ffffff; border-radius: 9999px; transition: width 0.1s linear;"></div>
+        <div
+          style="width: 100%; height: 4px; background: rgba(255, 255, 255, 0.2); border-radius: 9999px; overflow: hidden;">
+          <div id="loader-progress-bar"
+            style="width: 0%; height: 100%; background: #ffffff; border-radius: 9999px; transition: width 0.1s linear;">
+          </div>
         </div>
       </div>
     </div>
@@ -210,7 +281,7 @@
       position: fixed !important;
       width: 100% !important;
     }
-    
+
     @media (max-width: 768px) {
       #loader-container {
         flex-direction: column !important;
@@ -222,11 +293,11 @@
         transform: translate(-50%, 50%) !important;
         width: auto !important;
       }
-      
+
       #loader-text {
         font-size: 4rem !important;
       }
-      
+
       #loader-progress-container {
         width: 80vw !important;
         max-width: 300px !important;

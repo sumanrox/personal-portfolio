@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sumanroy.in/sitemap.xml

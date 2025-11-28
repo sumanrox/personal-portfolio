@@ -1,0 +1,34 @@
+# Suman Roy - Security Researcher Portfolio
+
+## Identity
+**Suman Roy** is a **Certified Ethical Hacker** and **Offensive Security Expert** based in **Kolkata, India**, serving a **Global Client Base**. He operates a premium **Security Audit Firm** specializing in **Remote Penetration Testing**, **Vulnerability Research**, and **International VAPT Services**. He is a top-tier bug bounty hunter (Top 1% on HackerOne) with over 12 discovered CVEs.
+
+## Core Competencies
+- **Web Application Penetration Testing**: Deep manual testing of complex web apps.
+- **Mobile Application Security**: iOS and Android security assessments.
+- **Network Penetration Testing**: Internal and external infrastructure testing.
+- **Source Code Review**: Identifying vulnerabilities in code (Python, Go, JS, etc.).
+- **DevSecOps**: Integrating security into CI/CD pipelines.
+
+## Key Projects
+- **VALAK**: Advanced multi-language web shell toolkit for red teams. Features obfuscation, encryption, and modular operations.
+- **ReconFavicon**: OSINT tool for identifying apps & services using favicon hashing.
+- **Xposed**: Fast, parallelized Python tool for detecting exposed `.git` repositories.
+- **PRISM**: Professional vulnerability reporting tool for pentesters.
+- **Nmap XML Visualizer**: Browser-based interactive visualizer for Nmap scan results.
+
+## Contact & Socials
+- **Email**: secureme@sumanroy.in
+- **GitHub**: [github.com/sumanrox](https://github.com/sumanrox)
+- **HackerOne**: [hackerone.com/sumanrox](https://hackerone.com/sumanrox)
+- **LinkedIn**: [linkedin.com/in/sumanroy-security](https://linkedin.com/in/sumanroy-security)
+- **Twitter**: [@sumanroy_sec](https://twitter.com/sumanroy_sec)
+
+## Site Structure
+- **Home**: Main landing page with hero section and bio.
+- **Services**: Detailed breakdown of security consulting services.
+- **Experience**: Professional background and achievements.
+- **Work**: Case studies and research highlights.
+- **Projects**: Open source tools and contributions.
+- **Blog**: Security research, tutorials, and write-ups.
+- **Contact**: Booking form for consultations.
