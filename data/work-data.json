@@ -1,0 +1,117 @@
+{
+    "header": {
+        "pillText": "RESEARCH",
+        "title": "Vulnerability<br>research",
+        "subtitle": [
+            "// CRITICAL FINDINGS",
+            "// ENTERPRISE SYSTEMS",
+            "// ZERO-DAY EXPLOITS"
+        ]
+    },
+    "research": [
+        {
+            "title": "Remote Code Execution",
+            "cve": "CVE-2024-9281",
+            "year": "2024",
+            "severity": "CRITICAL",
+            "description": "Unauthenticated RCE in enterprise CMS via insecure deserialization chain. Affected 50k+ installations globally.",
+            "stats": [
+                {
+                    "label": "Bounty",
+                    "value": "$15,000"
+                },
+                {
+                    "label": "CVSS",
+                    "value": "9.8",
+                    "color": "red"
+                },
+                {
+                    "label": "Impact",
+                    "value": "50k+"
+                }
+            ],
+            "link": {
+                "text": "Read Advisory",
+                "url": "#"
+            }
+        },
+        {
+            "title": "Auth Bypass via JWT",
+            "cve": "H1-2023-001",
+            "year": "2023",
+            "severity": "HIGH",
+            "description": "Complete account takeover in fintech app through weak signature validation. Bypassed MFA for 2M+ users.",
+            "stats": [
+                {
+                    "label": "Bounty",
+                    "value": "$10,000"
+                },
+                {
+                    "label": "CVSS",
+                    "value": "8.8",
+                    "color": "orange"
+                },
+                {
+                    "label": "Users",
+                    "value": "2M+"
+                }
+            ],
+            "link": {
+                "text": "Read Advisory",
+                "url": "#"
+            }
+        },
+        {
+            "title": "XSS to CSRF Chain",
+            "cve": "INTERNAL",
+            "year": "2023",
+            "severity": "CHAIN",
+            "description": "Chained stored XSS with CSRF to escalate privileges from viewer to admin. Demonstrated full platform compromise.",
+            "stats": [
+                {
+                    "label": "Bounty",
+                    "value": "$8,500"
+                },
+                {
+                    "label": "Complexity",
+                    "value": "High",
+                    "color": "purple"
+                },
+                {
+                    "label": "Scope",
+                    "value": "Admin"
+                }
+            ],
+            "link": {
+                "text": "Read Advisory",
+                "url": "#"
+            }
+        },
+        {
+            "title": "Cloud Reconnaissance",
+            "cve": "WHITEPAPER",
+            "year": "2022",
+            "severity": "PAPER",
+            "description": "Methodology for automated discovery of misconfigured S3 buckets. Identified 200+ exposures across Fortune 500s.",
+            "stats": [
+                {
+                    "label": "Findings",
+                    "value": "200+"
+                },
+                {
+                    "label": "Method",
+                    "value": "Auto"
+                },
+                {
+                    "label": "Impact",
+                    "value": "Global"
+                }
+            ],
+            "link": {
+                "text": "Download Paper",
+                "url": "#",
+                "icon": "download"
+            }
+        }
+    ]
+}

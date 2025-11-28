@@ -1,0 +1,110 @@
+{
+    "header": {
+        "pillText": "PROJECTS",
+        "title": "open source<br>contributions"
+    },
+    "projects": [
+        {
+            "title": "ReconMaster Pro",
+            "description": "Advanced penetration testing framework with automated vulnerability detection.",
+            "icon": "terminal",
+            "stats": {
+                "stars": "2.4k"
+            },
+            "tags": [
+                "Active",
+                "Maintained"
+            ],
+            "tech": [
+                "PYTHON",
+                "SECURITY"
+            ],
+            "link": "https://github.com/sumanroy"
+        },
+        {
+            "title": "SubEnum Scanner",
+            "description": "High-performance subdomain enumeration with multi-threaded scanning.",
+            "icon": "search",
+            "stats": {
+                "stars": "1.8k"
+            },
+            "tags": [
+                "Featured"
+            ],
+            "tech": [
+                "GO",
+                "RECON"
+            ],
+            "link": "https://github.com/sumanroy"
+        },
+        {
+            "title": "CloudGuard Suite",
+            "description": "Cloud security toolkit for AWS, GCP, and Azure with compliance reporting.",
+            "icon": "cloud",
+            "stats": {
+                "stars": "956"
+            },
+            "tags": [
+                "Active"
+            ],
+            "tech": [
+                "NODE.JS",
+                "CLOUD"
+            ],
+            "link": "https://github.com/sumanroy"
+        },
+        {
+            "title": "APIFuzzer",
+            "description": "Blazing-fast API security scanner built with Rust for intelligent fuzzing.",
+            "icon": "zap",
+            "stats": {
+                "stars": "743"
+            },
+            "tags": [
+                "New",
+                "Trending"
+            ],
+            "tech": [
+                "RUST",
+                "API"
+            ],
+            "link": "https://github.com/sumanroy"
+        },
+        {
+            "title": "XSSHunter",
+            "description": "Advanced XSS detection and exploitation framework with real-time alerts.",
+            "icon": "code",
+            "stats": {
+                "stars": "612"
+            },
+            "tags": [
+                "Maintained"
+            ],
+            "tech": [
+                "JAVASCRIPT",
+                "XSS"
+            ],
+            "link": "https://github.com/sumanroy"
+        },
+        {
+            "title": "SQLNinja",
+            "description": "Automated SQL injection detection and exploitation toolkit with database fingerprinting.",
+            "icon": "database",
+            "stats": {
+                "stars": "489"
+            },
+            "tags": [
+                "Active"
+            ],
+            "tech": [
+                "PYTHON",
+                "SQLI"
+            ],
+            "link": "https://github.com/sumanroy"
+        }
+    ],
+    "footer": {
+        "text": "View all repositories",
+        "link": "https://github.com/sumanroy"
+    }
+}

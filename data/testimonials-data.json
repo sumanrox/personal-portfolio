@@ -1,0 +1,91 @@
+{
+    "header": {
+        "pillText": "TESTIMONIALS",
+        "title": "trusted by<br>industry leaders"
+    },
+    "testimonials": [
+        {
+            "id": "mc",
+            "name": "Michael Chen",
+            "role": "CTO, TechCorp Inc.",
+            "quote": "\"Suman's expertise in penetration testing is absolutely unmatched in the security field.\"",
+            "initials": "MC",
+            "tags": [
+                "Enterprise",
+                "Verified"
+            ],
+            "stars": 5,
+            "featured": true
+        },
+        {
+            "id": "sw",
+            "name": "Sarah Williams",
+            "role": "Head of Security, FinanceHub",
+            "quote": "\"Professional, thorough assessment. The executive summary was perfect for our board presentation.\"",
+            "initials": "SW",
+            "tags": [
+                "Finance",
+                "Verified"
+            ],
+            "stars": 5,
+            "featured": true
+        },
+        {
+            "id": "jt",
+            "name": "James Thompson",
+            "role": "CEO, DataVault Solutions",
+            "quote": "\"Fast, efficient work. Discovered critical issues that could have been catastrophic.\"",
+            "initials": "JT",
+            "tags": [
+                "Critical",
+                "Verified"
+            ],
+            "stars": 5,
+            "featured": true
+        },
+        {
+            "id": "dp",
+            "name": "David Park",
+            "role": "VP Engineering",
+            "quote": "\"Clear action steps. Our application is significantly more secure now.\"",
+            "initials": "DP",
+            "tags": [
+                "Tech"
+            ],
+            "icon": "code"
+        },
+        {
+            "id": "er",
+            "name": "Emily Rodriguez",
+            "role": "Product Manager",
+            "quote": "\"Methodical approach and excellent communication throughout.\"",
+            "initials": "ER",
+            "tags": [
+                "SaaS"
+            ],
+            "icon": "message-circle"
+        },
+        {
+            "id": "al",
+            "name": "Alex Lee",
+            "role": "CTO, StartupX",
+            "quote": "\"Incredible insights into our infrastructure. Worth every penny.\"",
+            "initials": "AL",
+            "tags": [
+                "Startup"
+            ],
+            "icon": "rocket"
+        },
+        {
+            "id": "mk",
+            "name": "Maria Kim",
+            "role": "Security Director",
+            "quote": "\"Exceptional attention to detail. Found vulnerabilities we missed.\"",
+            "initials": "MK",
+            "tags": [
+                "Security"
+            ],
+            "icon": "target"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "header": {
+        "pillText": "FAQ",
+        "title": "frequently<br>asked"
+    },
+    "faq": [
+        {
+            "id": "faq-1",
+            "question": "What services do you offer?",
+            "answer": "I specialize in penetration testing, vulnerability assessments, bug bounty hunting, and security audits. I work with web applications, APIs, cloud infrastructure, and mobile applications."
+        },
+        {
+            "id": "faq-2",
+            "question": "How do I engage your services?",
+            "answer": "Contact me via the form below or email directly. We'll schedule a consultation to discuss your security needs, scope, timeline, and deliverables."
+        },
+        {
+            "id": "faq-3",
+            "question": "What is your turnaround time?",
+            "answer": "Project timelines vary based on scope. A typical web application assessment takes 1-2 weeks. Rush projects can be accommodated with advance notice."
+        },
+        {
+            "id": "faq-4",
+            "question": "Do you sign NDAs?",
+            "answer": "Yes, absolutely. All client information and findings are kept strictly confidential. I'm happy to sign NDAs and work agreements before any engagement begins."
+        },
+        {
+            "id": "faq-5",
+            "question": "What's in the final report?",
+            "answer": "You'll receive a comprehensive report including an executive summary, detailed findings with CVSS scores, proof-of-concept exploits, and actionable remediation recommendations."
+        },
+        {
+            "id": "faq-6",
+            "question": "Do you provide remediation support?",
+            "answer": "Yes! I provide technical guidance, code reviews for fixes, and retesting services to verify vulnerabilities have been properly addressed."
+        }
+    ]
+}

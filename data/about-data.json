@@ -1,0 +1,54 @@
+{
+  "header": {
+    "pillText": "ABOUT",
+    "pillId": "001",
+    "title": "About"
+  },
+  "description": [
+    "Protecting enterprises from advanced threats through comprehensive security assessments. 6+ years of elite consulting experience specializing in web applications, APIs, and cloud infrastructure.",
+    "I provide tailored security solutions for Fortune 500 companies and high-growth startups. My consultations have prevented critical data breaches, secured sensitive infrastructure, and established robust security frameworks that protect millions of users."
+  ],
+  "stats": [
+    { "value": 50, "suffix": "+ Clients", "target": 50 },
+    { "value": 200, "suffix": "+ Audits", "target": 200 },
+    { "value": 99, "suffix": "% Success", "target": 99 }
+  ],
+  "skills": {
+    "header": {
+      "pillId": "002",
+      "title": "Core Skills"
+    },
+    "items": [
+      { "name": "Web App Security", "percentage": 95 },
+      { "name": "API Security", "percentage": 92 },
+      { "name": "Penetration Testing", "percentage": 88 },
+      { "name": "Cloud Security", "percentage": 85 }
+    ],
+    "certifications": ["OSCP", "OSWE", "CEH", "GXPN"]
+  },
+  "arsenal": {
+    "header": {
+      "pillId": "003",
+      "title": "Arsenal"
+    },
+    "tools": [
+      "Burp Suite Pro",
+      "Metasploit Framework",
+      "OWASP ZAP",
+      "Nmap",
+      "Wireshark",
+      "Python & Bash",
+      "Docker & Kubernetes",
+      "AWS & Azure",
+      "SQLMap & Nuclei",
+      "Ghidra & IDA Pro"
+    ],
+    "specializations": [
+      "Web Application Security",
+      "Network Penetration Testing",
+      "Vulnerability Research",
+      "API Security Testing",
+      "Cloud Security (AWS/GCP)"
+    ]
+  }
+}

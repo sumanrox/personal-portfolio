@@ -32,14 +32,18 @@ import { initContactEnhancements } from './components/contactEnhancements.js';
 import { initWorkThreeBackground } from './components/workThreeBackground.js';
 import { initFAQPillHeader } from './components/faqPillHelper.js';
 import { initFooterCtaAnimation } from './components/footerCtaAnimation.js';
-import { initServicesConfig } from './components/servicesConfig.js';
+import { initServices } from './components/services.js';
+import { initExperience } from './components/experience.js';
+import { initWork } from './components/work.js';
+import { initFAQ } from './components/faq.js';
+import { initContact } from './components/contact.js';
 // FAQ toggle is now inline in the FAQ component
 import './components/heroThree.js'; // Hero video initialization happens here
 
 (function () {
   // Initialize page loader first
   initPageLoader();
-  
+
   // Register GSAP plugins
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -82,7 +86,11 @@ import './components/heroThree.js'; // Hero video initialization happens here
       try { initRotatingTestimonials(); } catch (e) { console.error('Error initializing Rotating Testimonials:', e); }
       try { initContactEnhancements(); } catch (e) { console.error('Error initializing Contact Enhancements:', e); }
       try { initWorkThreeBackground(); } catch (e) { console.error('Error initializing Work Three Background:', e); }
-      try { initServicesConfig(); } catch (e) { console.error('Error initializing Services Config:', e); }
+      try { initServices(); } catch (e) { console.error('Error initializing Services:', e); }
+      try { initExperience(); } catch (e) { console.error('Error initializing Experience:', e); }
+      try { initWork(); } catch (e) { console.error('Error initializing Work:', e); }
+      try { initFAQ(); } catch (e) { console.error('Error initializing FAQ:', e); }
+      try { initContact(); } catch (e) { console.error('Error initializing Contact:', e); }
       // Footer CTA Animation initialized with delay (line ~73)
       // FAQ toggle is now inline in the FAQ component - no initialization needed
 

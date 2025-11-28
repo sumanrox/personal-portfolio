@@ -1,0 +1,111 @@
+{
+    "header": {
+        "pillText": "SERVICES",
+        "title": "Premium<br>Security<br>Services"
+    },
+    "description": {
+        "main": "Comprehensive security solutions engineered for modern enterprises. From penetration testing to strategic consulting, I secure your digital infrastructure with precision and expertise.",
+        "trustedBy": [
+            "// TRUSTED BY FORTUNE 500",
+            "// 200+ SUCCESSFUL AUDITS",
+            "// ZERO BREACH RECORD"
+        ]
+    },
+    "services": [
+        {
+            "id": "01",
+            "title": "Penetration<br>Testing",
+            "description": "Elite security assessments simulating sophisticated real-world attacks to identify vulnerabilities before malicious actors do. Comprehensive reporting with actionable remediation strategies.",
+            "icon": "shield",
+            "featured": true,
+            "tags": [
+                "Web Applications & APIs",
+                "Network Infrastructure",
+                "Mobile & IoT Devices"
+            ],
+            "certification": "CEH CERTIFIED"
+        },
+        {
+            "id": "02",
+            "title": "Source Code<br>Analysis",
+            "description": "Comprehensive source code reviews identifying security vulnerabilities, code quality issues, and compliance gaps with detailed remediation guidance.",
+            "icon": "file-code",
+            "tags": [
+                "STATIC ANALYSIS",
+                "CODE QUALITY",
+                "SAST"
+            ]
+        },
+        {
+            "id": "03",
+            "title": "Security<br>Consulting",
+            "description": "Strategic guidance on security architecture, policy development, and risk management for building resilient security programs.",
+            "icon": "brain",
+            "tags": [
+                "STRATEGY",
+                "ARCHITECTURE",
+                "RISK"
+            ]
+        },
+        {
+            "id": "04",
+            "title": "Exploit<br>Development",
+            "description": "Custom exploit development and proof-of-concept creation demonstrating real-world attack scenarios and vulnerability impact.",
+            "icon": "code",
+            "tags": [
+                "POC CREATION",
+                "0-DAY"
+            ]
+        },
+        {
+            "id": "05",
+            "title": "Threat<br>Modeling",
+            "description": "Proactive identification of potential threats and attack vectors specific to your application architecture and business context.",
+            "icon": "radar",
+            "tags": [
+                "STRIDE",
+                "DREAD",
+                "ATTACK TREES"
+            ]
+        }
+    ],
+    "cta": {
+        "theme": {
+            "invertColors": true
+        },
+        "video": {
+            "enabled": true,
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "src": "assets/video/ecta.mp4",
+            "overlay": {
+                "enabled": true,
+                "opacity": 0.5,
+                "color": "#000000"
+            }
+        },
+        "badge": "AVAILABLE FOR PROJECTS",
+        "title": "Let's Build<br>Secure Systems",
+        "description": "Ready to fortify your digital infrastructure? Let's discuss how I can help secure your applications.",
+        "buttons": [
+            {
+                "text": "Start a Project",
+                "link": "#contact",
+                "icon": "arrow-right",
+                "primary": true
+            },
+            {
+                "text": "View Work",
+                "link": "#work",
+                "icon": "arrow-up-right",
+                "primary": false
+            }
+        ],
+        "trustIndicators": [
+            "CEH Certified",
+            "200+ Audits",
+            "Zero Breaches"
+        ]
+    }
+}

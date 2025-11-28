@@ -1,0 +1,97 @@
+{
+    "header": {
+        "pillText": "EXPERIENCE",
+        "title": "professional<br>experience",
+        "subtitle": [
+            "// ELITE CONSULTING",
+            "// RED TEAM OPERATIONS",
+            "// SECURITY RESEARCH"
+        ]
+    },
+    "experience": [
+        {
+            "role": "Independent Security Researcher",
+            "company": null,
+            "duration": "2023 - PRESENT",
+            "durationLabel": "2+ YEARS",
+            "description": "Full-time vulnerability research focusing on critical security flaws in enterprise platforms. Recognized in top bug bounty programs with substantial rewards and CVE attributions.",
+            "current": true,
+            "tags": [
+                "CVE Research",
+                "Bug Bounties",
+                "0-Day Exploits",
+                "Red Teaming"
+            ],
+            "stats": [
+                {
+                    "label": "CVEs Found",
+                    "value": "12+"
+                },
+                {
+                    "label": "Bounties",
+                    "value": "$50K+"
+                },
+                {
+                    "label": "Global Rank",
+                    "value": "Top 1%"
+                }
+            ]
+        },
+        {
+            "role": "Senior Penetration Tester",
+            "company": "SecureTech Solutions",
+            "duration": "2021 - 2023",
+            "badge": "SENIOR",
+            "badgeColor": "blue",
+            "icon": "shield-check",
+            "description": "Led comprehensive security assessments for Fortune 500 companies. Specialized in web applications, network infrastructure, and cloud security testing.",
+            "highlights": [
+                "50+ Enterprise Clients",
+                "Red Team Operations",
+                "Cloud Security Specialist"
+            ]
+        },
+        {
+            "role": "Security Analyst",
+            "company": "CyberGuard Inc.",
+            "duration": "2018 - 2021",
+            "badge": "ANALYST",
+            "badgeColor": "gray",
+            "icon": "radar",
+            "description": "Foundation role building cybersecurity expertise through incident response, vulnerability assessments, and security monitoring.",
+            "certifications": [
+                "CISSP",
+                "CEH",
+                "Python"
+            ]
+        },
+        {
+            "role": "Speaking & Community",
+            "company": "Community",
+            "type": "community",
+            "icon": "presentation",
+            "subtitle": "GIVING BACK TO THE COMMUNITY",
+            "link": {
+                "text": "View Talks",
+                "url": "#"
+            },
+            "items": [
+                {
+                    "title": "DEF CON Speaker",
+                    "description": "\"JWT Implementation Vulnerabilities\"",
+                    "icon": "award"
+                },
+                {
+                    "title": "BSides Regular",
+                    "description": "Austin, Dallas, Houston",
+                    "icon": "map-pin"
+                },
+                {
+                    "title": "CTF Competitor",
+                    "description": "Black Hat, Local Events",
+                    "icon": "flag"
+                }
+            ]
+        }
+    ]
+}

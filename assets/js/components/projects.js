@@ -1,23 +1,28 @@
-import { getConfig } from '../config.js';
+import { loadData } from '../utils/dataLoader.js';
 import { logger } from '../utils/logger.js';
 import { escapeHTML, sanitizeURL } from '../utils/domSanitizer.js';
 
-export function initProjects() {
+export async function initProjects() {
     const projectsContainer = document.querySelector('#projects-grid');
     if (!projectsContainer) return;
 
-    const projects = getConfig('projects');
-    if (!projects || projects.length === 0) {
+    const data = await loadData('projects');
+    if (!data || !data.projects || data.projects.length === 0) {
         renderPlaceholders(projectsContainer);
         return;
     }
 
-    renderProjects(projectsContainer, projects);
+    renderProjects(projectsContainer, data.projects);
 
     // Initialize Animations
     initEntranceAnimation();
     initTiltEffect();
     initMagneticEffect();
+
+    // Re-initialize icons
+    if (window.lucide) {
+        window.lucide.createIcons();
+    }
 }
 
 function renderProjects(container, projects) {
@@ -29,7 +34,7 @@ function renderProjects(container, projects) {
         github: sanitizeURL(project.github) || '#',
         tags: (project.tags || []).map(tag => escapeHTML(tag))
     }));
-    
+
     container.innerHTML = sanitizedProjects.map((project, index) => {
         // Pattern: 8, 4, 6, 6 for visual variety
         let colSpanClass = 'md:col-span-6 lg:col-span-6';
